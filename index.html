@@ -324,6 +324,242 @@
             padding: 2.5rem 0;
         }
 
+        .step2-section {
+            width: 100%;
+            background-color: #f1f5f7;
+            padding: 2.5rem 0;
+        }
+
+        .step2-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 0.75rem;
+        }
+
+        .step2-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.5rem;
+        }
+
+
+        .step2-headline {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.25;
+            color: #0b2540;
+        }
+
+        .step2-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step2-column-title {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #0b2540;
+        }
+
+        .compare-widget {
+            margin-top: 1.25rem;
+            background: #ffffff;
+            border: 1px solid rgba(11, 37, 64, 0.12);
+            box-shadow: 0 10px 32px rgba(11, 23, 54, 0.1);
+            padding: 1rem;
+        }
+
+        .calc-amount-label {
+            margin: 0 0 0.5rem 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #64748b;
+        }
+
+        .compare-widget-tabs {
+            display: flex;
+            gap: 0.4rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(11, 37, 64, 0.12);
+        }
+
+        .compare-tab {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #64748b;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.5rem 0.2rem;
+            margin-bottom: -1px;
+            cursor: pointer;
+        }
+
+        .compare-tab.active {
+            color: #0b2540;
+            border-bottom-color: #0b2540;
+        }
+
+        .compare-widget-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .compare-legend-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #0b2540;
+            background: #f1f5f7;
+            border: 1px solid rgba(11, 37, 64, 0.12);
+            padding: 0.3rem 0.6rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .compare-legend-pill.disabled {
+            opacity: 0.4;
+        }
+
+        .compare-legend-swatch {
+            width: 10px;
+            height: 10px;
+            flex-shrink: 0;
+        }
+
+        .compare-widget-timeframes {
+            display: flex;
+            gap: 0.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .compare-tf {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #0b2540;
+            background: #ffffff;
+            border: 1px solid rgba(11, 37, 64, 0.15);
+            padding: 0.35rem 0.7rem;
+            cursor: pointer;
+        }
+
+        .compare-tf.active {
+            background: #0b2540;
+            color: #ffffff;
+            border-color: #0b2540;
+        }
+
+        .compare-tf:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .compare-widget-chart {
+            position: relative;
+            height: 260px;
+        }
+
+        .compare-table-scroll {
+            overflow-x: auto;
+            overflow-y: auto;
+            max-height: 320px;
+        }
+
+        .compare-table thead th {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+        }
+
+        .compare-table th,
+        .compare-table td {
+            padding: 0.5rem 0.7rem;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .compare-table thead th {
+            background: #0b2540;
+            color: #ffffff;
+            font-size: 0.72rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .compare-table thead th.col-strata {
+            font-weight: 800;
+        }
+
+        .compare-table tbody td {
+            color: #0b2540;
+            border-bottom: 1px solid rgba(11, 37, 64, 0.06);
+        }
+
+        .compare-table tbody td.col-strata {
+            font-weight: 700;
+        }
+
+        .compare-table tr.total-row td {
+            background: #0b2540 !important;
+            color: #ffffff;
+            font-weight: 700;
+            border-bottom: none;
+        }
+
+        .compare-widget-note {
+            margin: 0.75rem 0 0 0;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            text-align: right;
+        }
+
+        .compare-disclaimer {
+            margin: 0.75rem 0 0 0;
+            font-size: 0.72rem;
+            line-height: 1.5;
+            color: #94a3b8;
+        }
+
+        .calc-disclaimer {
+            margin: 0.75rem 0 0 0;
+            font-size: 0.78rem;
+            line-height: 1.5;
+            color: #334155;
+            background: #f1f5f7;
+            border: 1px solid rgba(11, 37, 64, 0.12);
+            padding: 0.75rem 1rem;
+        }
+
+        .section-general-disclaimer {
+            margin: 2rem 0 0 0;
+            font-size: 0.72rem;
+            line-height: 1.5;
+            color: #94a3b8;
+            text-align: center;
+        }
+
         .vaultline-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
@@ -384,7 +620,8 @@
                 "img title"
                 "para para";
             width: 100%;
-            gap: 1.25rem;
+            column-gap: 1.25rem;
+            row-gap: 0.625rem;
         }
 
         .vaultline-intro-image {
@@ -407,9 +644,22 @@
             display: block;
         }
 
-        .vaultline-intro-title {
+        .vaultline-intro-title-block {
             grid-area: title;
             align-self: center;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.4rem;
+        }
+
+        .vaultline-linkedin-icon {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        .vaultline-intro-title {
             font-size: 1.4rem;
             font-weight: 400;
             line-height: 1.3;
@@ -510,19 +760,6 @@
             align-items: stretch;
         }
 
-        .vaultline-video-step-label {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .vaultline-video-step-label span {
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            color: #0b2540;
-        }
 
         .vaultline-video-subheadline {
             margin: 0;
@@ -578,6 +815,12 @@
             width: 20px;
             height: 20px;
             flex-shrink: 0;
+        }
+
+        .vaultline-headline-icon {
+            display: inline-block;
+            vertical-align: -3px;
+            margin-right: 0.4rem;
         }
 
         .vaultline-video .eyebrow {
@@ -711,6 +954,21 @@
         }
 
         @media (max-width: 768px) {
+            .step2-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6rem;
+            }
+
+            .step2-headline {
+                font-size: 1.5rem;
+            }
+
+            .step2-columns {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
             .vaultline-info {
                 text-align: left;
             }
@@ -758,9 +1016,12 @@
                 aspect-ratio: 4 / 3;
             }
 
+            .vaultline-intro-title-block {
+                align-self: auto;
+            }
+
             .vaultline-intro-title {
                 font-size: 1.1rem;
-                align-self: auto;
             }
 
             .vaultline-intro-paragraph {
@@ -914,7 +1175,10 @@
                             <div class="vaultline-intro-image">
                                 <img src="assets/founder.jpg" alt="Co-Founder & Chief Technology Officer">
                             </div>
-                            <h3 class="vaultline-intro-title">Meet Our Co-Founder & Chief Technology Officer</h3>
+                            <div class="vaultline-intro-title-block">
+                                <svg class="vaultline-linkedin-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#6b7280"/><g transform="translate(-1.3,0)"><circle cx="7.5" cy="7.5" r="1.6" fill="#ffffff"/><rect x="6.2" y="10.5" width="2.6" height="8" fill="#ffffff"/><path d="M11.5 10.5H14V12C14.6 11 15.6 10.3 17 10.3C19.5 10.3 20.5 12 20.5 14.5V18.5H17.8V15C17.8 13.8 17.3 13 16.2 13C15.3 13 14.8 13.6 14.6 14.2C14.5 14.4 14.5 14.7 14.5 15V18.5H11.8C11.8 18.5 11.85 11.3 11.5 10.5Z" fill="#ffffff"/></g></svg>
+                                <h3 class="vaultline-intro-title">Meet Our Co-Founder & Chief Technology Officer</h3>
+                            </div>
                             <p class="vaultline-intro-paragraph">Hi, I am Angel John Renteria<br><br>With over 11 years of market experience, my team and I built Vaultline to help experienced investors like you reduce frustration and build real confidence in your capital — with truly hands-off and consistent risk-adjusted returns.</p>
                         </div>
                     </div>
@@ -923,26 +1187,25 @@
                 <div class="vaultline-feature-cards">
                     <div class="vaultline-feature-card">
                         <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V19" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M7 18H17" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M4 8L12 6L20 9" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 8V12" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M20 9V13" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M1.5 12C1.5 13.66 2.74 15 4.25 15C5.76 15 7 13.66 7 12" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 13C17.5 14.66 18.59 16 20 16C21.41 16 22.5 14.66 22.5 13" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span>I was tired of doing everything right and still having no peace of mind about my money.<br><span class="vaultline-feature-tagline">I wanted something that I could trust, even when markets are slow.</span></span>
+                        <span>I was tired of doing everything right and still having no peace of mind about my money.</span>
                     </div>
                     <div class="vaultline-feature-card">
                         <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.9 8.6L22 9.3L16.8 14.1L18.2 21L12 17.3L5.8 21L7.2 14.1L2 9.3L9.1 8.6Z" stroke="#0b2540" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><clipPath id="halfstar1"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2L14.9 8.6L22 9.3L16.8 14.1L18.2 21L12 17.3L5.8 21L7.2 14.1L2 9.3L9.1 8.6Z" fill="#0b2540" stroke="none" clip-path="url(#halfstar1)"/></svg>
-                        <span>I was tired of being asked to trust systems I couldn't actually see or control.<br><span class="vaultline-feature-tagline">I wanted transparency without giving up custody or access to my funds.</span></span>
+                        <span>I realized investing the old way for retirement meant missing out on life today.</span>
                     </div>
                     <div class="vaultline-feature-card">
                         <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 3L12 6L16 3L20 6C20 14 17 20 12 22C7 20 4 14 4 6Z" fill="#0b2540" stroke="none"/><path d="M7 11L9 9.3L11 11" stroke="#f1f5f7" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 11L15 9.3L17 11" stroke="#f1f5f7" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 14C9 17.5 15 17.5 17 14" stroke="#f1f5f7" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
-                        <span>I was tired of strategies that looked great until conditions changed.<br><span class="vaultline-feature-tagline">I wanted something designed to survive uncertainty, not just perform in growing markets.</span></span>
+                        <span>I was tired of strategies that looked great until conditions changed.</span>
                     </div>
                     <div class="vaultline-feature-card">
                         <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                        <span>I wanted one part of my portfolio that didn't demand my attention every day.<br><span class="vaultline-feature-tagline">Something steady I could trust to quietly do its job.</span></span>
+                        <span>I wanted one part of my portfolio that didn't demand my attention every day.</span>
                     </div>
                 </div>
                 <p class="vaultline-closing-tagline">If you're here, it's likely because parts of this already sound like you — and you're looking for a secure way to grow a portion of your portfolio that isn't tied to what you already own.</p>
             </div>
             <div class="vaultline-video">
-                <div class="vaultline-video-step-label"><svg class="vaultline-chess-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg><span>STEP 1</span></div>
-                <h4 class="vaultline-video-subheadline">A Quick Word From Angel Before Your Scheduled Demonstration</h4>
+                <h4 class="vaultline-video-subheadline"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>A Quick Word From Angel Before Your Scheduled Demonstration</h4>
                 <div class="video-frame">
                 <div class="video-wrap" data-video-id="SoMNR9LA-4A">
                     <img src="assets/foundertn.png" alt="A Quick Word From Angel" class="video-facade-thumb">
@@ -956,29 +1219,33 @@
                 </div>
                 <p class="vaultline-video-tagline">Please watch for full context of what to expect on your call with our team.</p>
                 <div class="vaultline-section-divider"></div>
-                <h4 class="vaultline-video-subheadline vaultline-faq-subheadline">Still Have Questions?</h4>
+                <h4 class="vaultline-video-subheadline vaultline-faq-subheadline">Answers to more of your questions.</h4>
                 <select class="vaultline-faq-search" id="faqSelect" onchange="document.getElementById('faqVideoTitle').textContent = this.options[this.selectedIndex].text;">
                     <option value="" disabled selected>Search or select a question...</option>
-                    <option>FAQ Example 1</option>
-                    <option>FAQ Example 2</option>
-                    <option>FAQ Example 3</option>
-                    <option>FAQ Example 4</option>
-                    <option>FAQ Example 5</option>
-                    <option>FAQ Example 6</option>
-                    <option>FAQ Example 7</option>
-                    <option>FAQ Example 8</option>
-                    <option>FAQ Example 9</option>
-                    <option>FAQ Example 10</option>
-                    <option>FAQ Example 11</option>
-                    <option>FAQ Example 12</option>
-                    <option>FAQ Example 13</option>
-                    <option>FAQ Example 14</option>
-                    <option>FAQ Example 15</option>
-                    <option>FAQ Example 16</option>
-                    <option>FAQ Example 17</option>
-                    <option>FAQ Example 18</option>
-                    <option>FAQ Example 19</option>
-                    <option>FAQ Example 20</option>
+                    <optgroup label="Trust & Safety">
+                        <option>How do I know this isn't a scam?</option>
+                        <option>Who actually holds my money — is it in your account or mine?</option>
+                        <option>Can I take my money out whenever I want?</option>
+                        <option>How do I know the results are real and not cherry-picked?</option>
+                    </optgroup>
+                    <optgroup label="The Product">
+                        <option>Do I have to sit and watch charts all day or does it run itself?</option>
+                        <option>I already have property and stocks — where does this fit in?</option>
+                        <option>What happens to my money if the market crashes?</option>
+                    </optgroup>
+                    <optgroup label="Getting Started">
+                        <option>How much money do I need to get started?</option>
+                        <option>What account do I need to open and how does that work?</option>
+                    </optgroup>
+                    <optgroup label="Performance & Risk">
+                        <option>What kind of returns are people actually seeing?</option>
+                        <option>What's the worst case scenario — how much could I lose?</option>
+                        <option>You can't guarantee future returns — so why should I trust the numbers?</option>
+                    </optgroup>
+                    <optgroup label="The Team">
+                        <option>Who are the people behind this and why should I trust them?</option>
+                        <option>How is this any different from just using a financial adviser?</option>
+                    </optgroup>
                 </select>
                 <h5 class="vaultline-faq-video-title" id="faqVideoTitle">Search or select a question...</h5>
                 <div class="video-frame">
@@ -992,6 +1259,76 @@
                 </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="step2-section">
+        <div class="step2-inner">
+            <div class="step2-row">
+                <h2 class="step2-headline"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>Why Algorithmic Trading?</h2>
+            </div>
+            <div class="step2-columns">
+                <div class="step2-column">
+                    <h3 class="step2-column-title">Uncorrelated, Automated Exposure</h3>
+                    <div class="compare-widget" id="compareWidget">
+                        <h4 class="calc-amount-label">See how Vaultline compares to other asset classes</h4>
+                        <div class="compare-widget-tabs">
+                            <button class="compare-tab active" data-view="chart">Chart</button>
+                            <button class="compare-tab" data-view="table">Table</button>
+                        </div>
+                        <div class="compare-widget-timeframes">
+                            <button class="compare-tf active" data-range="All">All</button>
+                            <button class="compare-tf" data-range="2023">2023</button>
+                            <button class="compare-tf" data-range="2024">2024</button>
+                            <button class="compare-tf" data-range="2025">2025</button>
+                            <button class="compare-tf" data-range="2026">2026</button>
+                        </div>
+                        <div class="compare-view" data-view-panel="chart">
+                            <div class="compare-widget-legend" id="compareLegend"></div>
+                            <div class="compare-widget-chart">
+                                <canvas id="compareChart"></canvas>
+                            </div>
+                            <p class="compare-widget-note">Cumulative return based on monthly performance data.</p>
+                        </div>
+                        <div class="compare-view" data-view-panel="table" hidden>
+                            <div class="compare-table-scroll">
+                                <table class="compare-table" id="compareTable"></table>
+                            </div>
+                            <p class="compare-widget-note">Monthly return, %. Heatmap scaled by magnitude.</p>
+                        </div>
+                    </div>
+                    <p class="compare-disclaimer">Past performance is not indicative of future results. Strata performance is sourced live from Myfxbook, with live data tracking since January 2025 when we went public; comparison asset data (S&P 500, Gold, Crypto) is historical and shown for illustrative comparison only.</p>
+                </div>
+                <div class="step2-column">
+                    <h3 class="step2-column-title">What That Looks Like On A Portion Of Your Portfolio</h3>
+                    <div class="compare-widget" id="calcWidget">
+                        <p class="calc-amount-label">Select Starting Amount To Simulate Opportunity Cost</p>
+                        <div class="compare-widget-timeframes">
+                            <button class="compare-tf" data-amount="25000">$25,000</button>
+                            <button class="compare-tf" data-amount="50000">$50,000</button>
+                            <button class="compare-tf active" data-amount="100000">$100,000</button>
+                            <button class="compare-tf" data-amount="250000">$250,000</button>
+                        </div>
+                        <div class="compare-widget-tabs">
+                            <button class="compare-tab active" data-calc-view="chart">Chart</button>
+                            <button class="compare-tab" data-calc-view="table">Table</button>
+                        </div>
+                        <div class="compare-view" data-calc-panel="chart">
+                            <div class="compare-widget-chart">
+                                <canvas id="calcChart"></canvas>
+                            </div>
+                            <p class="compare-widget-note" id="calcChartNote">Since January 2025. Based on Strata's monthly performance.</p>
+                        </div>
+                        <div class="compare-view" data-calc-panel="table" hidden>
+                            <div class="compare-table-scroll">
+                                <table class="compare-table" id="calcTable"></table>
+                            </div>
+                            <p class="compare-widget-note">Since January 2025. Based on Strata's monthly performance.</p>
+                        </div>
+                    </div>
+                    <p class="calc-disclaimer"><strong>This is a hypothetical illustration only and does not represent an actual investment account.</strong> It is not a prediction or guarantee of future performance. Trading forex and leveraged products carries substantial risk of loss, including the potential to lose more than your initial investment.</p>
+                </div>
+            </div>
+            <p class="section-general-disclaimer">This content is for informational purposes only and does not constitute financial or investment advice. Please consult a licensed financial advisor before making investment decisions.</p>
         </div>
     </section>
     <script>
@@ -1015,6 +1352,392 @@
             wrap.innerHTML = '';
             wrap.appendChild(iframe);
         });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <script>
+        (function () {
+            var MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            var compareWidgetEl = document.getElementById('compareWidget');
+            var calcWidgetEl = document.getElementById('calcWidget');
+
+            var monthlyData = [
+                { year: 2023, month: 0, strata: 13.05, sp500: 5.80, gold: 2.26, crypto: 30.40 },
+                { year: 2023, month: 1, strata: 10.76, sp500: -2.45, gold: -6.78, crypto: 3.40 },
+                { year: 2023, month: 2, strata: 5.86, sp500: 3.68, gold: 5.18, crypto: 9.30 },
+                { year: 2023, month: 3, strata: 4.88, sp500: 1.64, gold: 2.28, crypto: 3.20 },
+                { year: 2023, month: 4, strata: 5.33, sp500: 0.31, gold: -4.95, crypto: -6.00 },
+                { year: 2023, month: 5, strata: 9.37, sp500: 6.39, gold: -3.49, crypto: 3.30 },
+                { year: 2023, month: 6, strata: 8.13, sp500: 3.11, gold: 5.11, crypto: 1.00 },
+                { year: 2023, month: 7, strata: 5.00, sp500: -1.55, gold: -1.29, crypto: -8.80 },
+                { year: 2023, month: 8, strata: 4.58, sp500: -5.35, gold: -3.69, crypto: 2.60 },
+                { year: 2023, month: 9, strata: 8.94, sp500: -2.12, gold: 1.52, crypto: 19.00 },
+                { year: 2023, month: 10, strata: 5.73, sp500: 8.72, gold: 2.32, crypto: 11.00 },
+                { year: 2023, month: 11, strata: 5.24, sp500: 4.61, gold: 3.36, crypto: 15.20 },
+                { year: 2024, month: 0, strata: 5.21, sp500: 2.12, gold: -1.31, crypto: 0.40 },
+                { year: 2024, month: 1, strata: 4.93, sp500: 4.84, gold: 0.28, crypto: 40.00 },
+                { year: 2024, month: 2, strata: 7.05, sp500: 3.06, gold: 9.25, crypto: 16.30 },
+                { year: 2024, month: 3, strata: 12.01, sp500: -4.23, gold: 2.05, crypto: -11.30 },
+                { year: 2024, month: 4, strata: 2.51, sp500: 4.94, gold: 1.80, crypto: 8.60 },
+                { year: 2024, month: 5, strata: 3.46, sp500: 3.08, gold: -0.17, crypto: -11.40 },
+                { year: 2024, month: 6, strata: 1.84, sp500: 0.94, gold: 5.23, crypto: 6.10 },
+                { year: 2024, month: 7, strata: 12.15, sp500: 2.00, gold: 2.24, crypto: 4.63 },
+                { year: 2024, month: 8, strata: 5.00, sp500: 2.46, gold: 5.26, crypto: 8.00 },
+                { year: 2024, month: 9, strata: 7.45, sp500: -0.91, gold: 4.11, crypto: 2.80 },
+                { year: 2024, month: 10, strata: 5.39, sp500: 5.40, gold: -3.24, crypto: 31.74 },
+                { year: 2024, month: 11, strata: 2.36, sp500: -2.62, gold: -1.13, crypto: -20.52 },
+                { year: 2025, month: 0, strata: 3.83, sp500: 2.33, gold: 6.64, crypto: 9.61 },
+                { year: 2025, month: 1, strata: 3.96, sp500: -0.25, gold: 2.04, crypto: -17.61 },
+                { year: 2025, month: 2, strata: 4.78, sp500: -5.97, gold: 9.32, crypto: -2.16 },
+                { year: 2025, month: 3, strata: 10.58, sp500: -0.51, gold: 5.29, crypto: 14.12 },
+                { year: 2025, month: 4, strata: 6.09, sp500: 5.09, gold: 0.03, crypto: 11.07 },
+                { year: 2025, month: 5, strata: 5.36, sp500: 5.23, gold: 0.01, crypto: 2.39 },
+                { year: 2025, month: 6, strata: 5.47, sp500: 2.46, gold: -0.38, crypto: 8.04 },
+                { year: 2025, month: 7, strata: 8.93, sp500: 2.75, gold: 4.78, crypto: -6.48 },
+                { year: 2025, month: 8, strata: 11.89, sp500: 4.48, gold: 12.03, crypto: 5.38 },
+                { year: 2025, month: 9, strata: 4.09, sp500: 2.63, gold: 3.60, crypto: -3.95 },
+                { year: 2025, month: 10, strata: 5.33, sp500: -0.48, gold: 5.50, crypto: -17.49 },
+                { year: 2025, month: 11, strata: 0.81, sp500: -0.48, gold: -0.59, crypto: 2.55 },
+                { year: 2026, month: 0, strata: 6.60, sp500: 0.89, gold: 12.75, crypto: -10.16 },
+                { year: 2026, month: 1, strata: 2.84, sp500: -1.21, gold: 5.00, crypto: -13.57 },
+                { year: 2026, month: 2, strata: 15.51, sp500: -5.76, gold: 10.08, crypto: 1.24 },
+                { year: 2026, month: 3, strata: 6.42, sp500: -0.76, gold: 5.83, crypto: 13.61 },
+                { year: 2026, month: 4, strata: 3.68, sp500: 6.15, gold: -0.49, crypto: -2.67 },
+                { year: 2026, month: 5, strata: 3.21, sp500: null, gold: null, crypto: null }
+            ];
+
+            var series = [
+                { key: 'strata', label: 'Strata (Us)', color: '#16a34a' },
+                { key: 'sp500', label: 'S&P 500', color: '#64748b' },
+                { key: 'gold', label: 'Gold', color: '#a16207' },
+                { key: 'crypto', label: 'Crypto', color: '#f59e0b' }
+            ];
+
+            function buildCumulative(rows) {
+                var running = { strata: 0, sp500: 0, gold: 0, crypto: 0 };
+                var ended = { strata: false, sp500: false, gold: false, crypto: false };
+                var labels = [];
+                var out = { strata: [], sp500: [], gold: [], crypto: [] };
+                rows.forEach(function (row) {
+                    labels.push(MONTH_NAMES[row.month] + ' ' + row.year);
+                    series.forEach(function (s) {
+                        var key = s.key;
+                        if (row[key] === null || row[key] === undefined) {
+                            ended[key] = true;
+                        }
+                        if (ended[key]) {
+                            out[key].push(null);
+                        } else {
+                            running[key] = running[key] + row[key];
+                            out[key].push(Math.round(running[key] * 100) / 100);
+                        }
+                    });
+                });
+                return { labels: labels, values: out };
+            }
+
+            var legendEl = document.getElementById('compareLegend');
+            series.forEach(function (s) {
+                var pill = document.createElement('div');
+                pill.className = 'compare-legend-pill';
+                pill.dataset.key = s.key;
+                pill.innerHTML = '<span class="compare-legend-swatch" style="background:' + s.color + '"></span>' + s.label;
+                legendEl.appendChild(pill);
+            });
+
+            var initial = buildCumulative(monthlyData);
+            var ctx = document.getElementById('compareChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: initial.labels,
+                    datasets: series.map(function (s) {
+                        return {
+                            label: s.label,
+                            data: initial.values[s.key],
+                            borderColor: s.color,
+                            backgroundColor: s.color,
+                            borderWidth: 2,
+                            pointRadius: 0,
+                            tension: 0.15,
+                            spanGaps: false
+                        };
+                    })
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function (item) {
+                                    return item.dataset.label + ': ' + item.formattedValue + '%';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { ticks: { maxTicksLimit: 8, color: '#334155', font: { size: 11 } }, grid: { display: false } },
+                        y: { ticks: { color: '#334155', font: { size: 11 }, callback: function (v) { return v + '%'; } }, grid: { color: 'rgba(11,37,64,0.08)' } }
+                    }
+                }
+            });
+
+            var selectedYears = null;
+            var activeView = 'chart';
+
+            function currentRows() {
+                return selectedYears === null
+                    ? monthlyData
+                    : monthlyData.filter(function (r) { return selectedYears.indexOf(r.year) !== -1; });
+            }
+
+            function refreshChart() {
+                var result = buildCumulative(currentRows());
+                chart.data.labels = result.labels;
+                chart.data.datasets.forEach(function (ds, i) {
+                    ds.data = result.values[series[i].key];
+                });
+                chart.update();
+            }
+
+            function heatColor(v) {
+                if (v === null || v === undefined) return '#f8fafc';
+                var capped = Math.max(-20, Math.min(20, v));
+                var t = Math.abs(capped) / 20;
+                var alpha = 0.12 + 0.6 * t;
+                return v >= 0 ? 'rgba(22, 163, 74, ' + alpha + ')' : 'rgba(220, 38, 38, ' + alpha + ')';
+            }
+
+            function fmtPct(v) {
+                if (v === null || v === undefined) return '—';
+                return (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
+            }
+
+            function refreshTable() {
+                var rows = currentRows();
+                var byYear = {};
+                rows.forEach(function (r) { (byYear[r.year] = byYear[r.year] || []).push(r); });
+                var years = Object.keys(byYear).sort();
+
+                var html = '<thead><tr><th>Month</th>';
+                series.forEach(function (s) {
+                    html += '<th class="' + (s.key === 'strata' ? 'col-strata' : '') + '">' + s.label + '</th>';
+                });
+                html += '</tr></thead><tbody>';
+
+                years.forEach(function (year) {
+                    var yearRows = byYear[year];
+                    var totals = { strata: 0, sp500: 0, gold: 0, crypto: 0 };
+                    var hasData = { strata: false, sp500: false, gold: false, crypto: false };
+                    yearRows.forEach(function (row) {
+                        html += '<tr><td>' + MONTH_NAMES[row.month] + ' ' + row.year + '</td>';
+                        series.forEach(function (s) {
+                            var v = row[s.key];
+                            if (v !== null && v !== undefined) {
+                                totals[s.key] += v;
+                                hasData[s.key] = true;
+                            }
+                            html += '<td class="' + (s.key === 'strata' ? 'col-strata' : '') + '" style="background:' + heatColor(v) + '">' + fmtPct(v) + '</td>';
+                        });
+                        html += '</tr>';
+                    });
+                    html += '<tr class="total-row"><td>' + year + ' Total</td>';
+                    series.forEach(function (s) {
+                        html += '<td>' + (hasData[s.key] ? fmtPct(Math.round(totals[s.key] * 100) / 100) : '—') + '</td>';
+                    });
+                    html += '</tr>';
+                });
+
+                html += '</tbody>';
+                document.getElementById('compareTable').innerHTML = html;
+            }
+
+            function refreshAll() {
+                refreshChart();
+                refreshTable();
+            }
+
+            function updateRangeButtons() {
+                compareWidgetEl.querySelectorAll('.compare-tf').forEach(function (b) {
+                    if (b.dataset.range === 'All') {
+                        b.classList.toggle('active', selectedYears === null);
+                    } else {
+                        b.classList.toggle('active', selectedYears !== null && selectedYears.indexOf(Number(b.dataset.range)) !== -1);
+                    }
+                });
+            }
+
+            function toggleYear(range) {
+                if (range === 'All') {
+                    if (compareWidgetEl.querySelector('.compare-tf[data-range="All"]').disabled) return;
+                    selectedYears = null;
+                } else if (activeView === 'table') {
+                    selectedYears = [Number(range)];
+                } else {
+                    var year = Number(range);
+                    if (selectedYears === null) {
+                        selectedYears = [year];
+                    } else {
+                        var idx = selectedYears.indexOf(year);
+                        if (idx === -1) {
+                            selectedYears.push(year);
+                        } else {
+                            selectedYears.splice(idx, 1);
+                        }
+                        if (selectedYears.length === 0) selectedYears = null;
+                    }
+                }
+                updateRangeButtons();
+                refreshAll();
+            }
+
+            compareWidgetEl.querySelectorAll('.compare-tf').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    toggleYear(btn.dataset.range);
+                });
+            });
+
+            legendEl.querySelectorAll('.compare-legend-pill').forEach(function (pill, i) {
+                pill.addEventListener('click', function () {
+                    var meta = chart.getDatasetMeta(i);
+                    meta.hidden = meta.hidden === null ? !chart.data.datasets[i].hidden : !meta.hidden;
+                    pill.classList.toggle('disabled');
+                    chart.update();
+                });
+            });
+
+            var allBtn = compareWidgetEl.querySelector('.compare-tf[data-range="All"]');
+
+            compareWidgetEl.querySelectorAll('.compare-tab').forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    compareWidgetEl.querySelectorAll('.compare-tab').forEach(function (t) { t.classList.remove('active'); });
+                    tab.classList.add('active');
+                    compareWidgetEl.querySelectorAll('.compare-view').forEach(function (panel) {
+                        panel.hidden = panel.dataset.viewPanel !== tab.dataset.view;
+                    });
+                    activeView = tab.dataset.view;
+                    if (activeView === 'table') {
+                        allBtn.disabled = true;
+                        if (selectedYears === null) {
+                            selectedYears = [2026];
+                            updateRangeButtons();
+                            refreshAll();
+                        } else if (selectedYears.length > 1) {
+                            selectedYears = [selectedYears[0]];
+                            updateRangeButtons();
+                            refreshAll();
+                        }
+                    } else {
+                        allBtn.disabled = false;
+                        chart.resize();
+                    }
+                });
+            });
+
+            refreshTable();
+
+            var calcRows = monthlyData.filter(function (r) { return r.year >= 2025 && r.strata !== null; });
+            var calcAmount = 100000;
+
+            function buildCalcSeries(principal) {
+                var labels = [];
+                var values = [principal];
+                var balance = principal;
+                labels.push('Start');
+                calcRows.forEach(function (row) {
+                    balance = balance * (1 + row.strata / 100);
+                    values.push(Math.round(balance * 100) / 100);
+                    labels.push(MONTH_NAMES[row.month] + ' ' + row.year);
+                });
+                return { labels: labels, values: values };
+            }
+
+            function fmtUsd(v) {
+                return '$' + Math.round(v).toLocaleString('en-US');
+            }
+
+            var calcCtx = document.getElementById('calcChart').getContext('2d');
+            var calcInitial = buildCalcSeries(calcAmount);
+            var calcChart = new Chart(calcCtx, {
+                type: 'line',
+                data: {
+                    labels: calcInitial.labels,
+                    datasets: [{
+                        label: 'Account Value',
+                        data: calcInitial.values,
+                        borderColor: '#16a34a',
+                        backgroundColor: '#16a34a',
+                        borderWidth: 2,
+                        pointRadius: 0,
+                        tension: 0.15
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function (item) { return fmtUsd(item.parsed.y) + ' (hypothetical)'; }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { ticks: { maxTicksLimit: 8, color: '#334155', font: { size: 11 } }, grid: { display: false } },
+                        y: { ticks: { color: '#334155', font: { size: 11 }, callback: function (v) { return fmtUsd(v); } }, grid: { color: 'rgba(11,37,64,0.08)' } }
+                    }
+                }
+            });
+
+            function refreshCalcTable(principal) {
+                var balance = principal;
+                var html = '<thead><tr><th>Month</th><th>Return</th><th>Account Value</th></tr></thead><tbody>';
+                html += '<tr><td>Start</td><td>—</td><td>' + fmtUsd(principal) + '</td></tr>';
+                calcRows.forEach(function (row) {
+                    balance = balance * (1 + row.strata / 100);
+                    html += '<tr><td>' + MONTH_NAMES[row.month] + ' ' + row.year + '</td>'
+                        + '<td style="background:' + heatColor(row.strata) + '">' + fmtPct(row.strata) + '</td>'
+                        + '<td>' + fmtUsd(balance) + '</td></tr>';
+                });
+                html += '<tr class="total-row"><td>Total</td><td>' + fmtPct(Math.round((balance / principal - 1) * 10000) / 100) + '</td><td>' + fmtUsd(balance) + '</td></tr>';
+                html += '</tbody>';
+                document.getElementById('calcTable').innerHTML = html;
+            }
+
+            function refreshCalc() {
+                var result = buildCalcSeries(calcAmount);
+                calcChart.data.labels = result.labels;
+                calcChart.data.datasets[0].data = result.values;
+                calcChart.update();
+                refreshCalcTable(calcAmount);
+            }
+
+            document.querySelectorAll('.compare-tf[data-amount]').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('.compare-tf[data-amount]').forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    calcAmount = Number(btn.dataset.amount);
+                    refreshCalc();
+                });
+            });
+
+            document.querySelectorAll('[data-calc-view]').forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    document.querySelectorAll('[data-calc-view]').forEach(function (t) { t.classList.remove('active'); });
+                    tab.classList.add('active');
+                    document.querySelectorAll('[data-calc-panel]').forEach(function (panel) {
+                        panel.hidden = panel.dataset.calcPanel !== tab.dataset.calcView;
+                    });
+                    if (tab.dataset.calcView === 'chart') calcChart.resize();
+                });
+            });
+
+            refreshCalcTable(calcAmount);
+        })();
     </script>
 </body>
 </html>
