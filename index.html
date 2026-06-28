@@ -101,7 +101,11 @@
 
         .hero-headline {
             text-align: center;
-            margin-bottom: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-headline .eyebrow {
+            margin-bottom: 1.5rem;
         }
 
         .hero-headline h1 {
@@ -128,6 +132,7 @@
             font-weight: 600;
             background-color: #ffffff;
             padding: 0.75rem 1rem;
+            max-width: 620px;
         }
 
         .eyebrow-text {
@@ -137,6 +142,7 @@
             flex-wrap: wrap;
             line-height: 1.5;
             text-align: center;
+            justify-content: center;
         }
 
         .myfxbook {
@@ -154,6 +160,30 @@
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             align-items: center;
+        }
+
+        .hero-image-col {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .hero-image-eyebrow {
+            margin-bottom: 0;
+            align-self: center;
+            background-color: transparent;
+            padding: 0;
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-image-eyebrow .myfxbook {
+            text-transform: none;
+        }
+
+        .hero-image-eyebrow .eyebrow-text {
+            justify-content: center;
         }
 
         .hero-image {
@@ -177,7 +207,9 @@
         }
 
         .hero-text .hero-badge {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
             background-color: #ffffff;
             color: #0b2540;
             font-size: 0.78rem;
@@ -189,10 +221,57 @@
             margin-bottom: 1.2rem;
         }
 
+        .hero-badge-logo {
+            height: 0.85rem;
+            width: auto;
+            display: block;
+        }
+
         .hero-text h2 {
             margin-bottom: 1rem;
             line-height: 1.15;
             color: #2b2b2b; /* charcoal */
+        }
+
+        .hero-goodbye-headline {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #2b2b2b;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-goodbye-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .hero-goodbye-item {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            background-color: #ffffff;
+            border: 1px solid rgba(11, 37, 64, 0.1);
+            padding: 0.75rem 1rem;
+            font-size: 0.92rem;
+            line-height: 1.35;
+            color: #0b2540;
+            font-weight: 600;
+        }
+
+        .hero-goodbye-arrow {
+            flex-shrink: 0;
+            color: #0b2540;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-goodbye-arrow svg {
+            width: 22px;
+            height: 22px;
         }
 
         .hero-text h2 .apy-large {
@@ -274,6 +353,63 @@
             max-width: 760px;
         }
 
+        .vaultline-intro-row {
+            display: grid;
+            grid-template-columns: 25% 1fr;
+            grid-template-areas:
+                "img title"
+                "img para";
+            width: 100%;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+        }
+
+        .vaultline-intro-image {
+            grid-area: img;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(16px) saturate(160%);
+            -webkit-backdrop-filter: blur(16px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            box-shadow: 0 10px 32px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+            padding: 0.3rem;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+        }
+
+        .vaultline-intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .vaultline-intro-title {
+            grid-area: title;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #0b2540;
+            margin: 0;
+            align-self: end;
+        }
+
+        .vaultline-intro-paragraph {
+            grid-area: para;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #334155;
+            margin: 0;
+            align-self: start;
+        }
+
+        .vaultline-feature-subtitle {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0b2540;
+            margin: 0 0 0.75rem 0;
+        }
+
         .vaultline-feature-cards {
             display: flex;
             flex-direction: column;
@@ -282,7 +418,7 @@
 
         .vaultline-feature-card {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 0.75rem;
             background: #f1f5f7;
             border-radius: 0;
@@ -293,6 +429,15 @@
             width: 20px;
             height: 20px;
             flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+
+        .vaultline-feature-card .vaultline-feature-tagline {
+            display: inline-block;
+            margin-top: 0.4rem;
+            font-size: 0.88rem;
+            font-weight: 400;
+            color: #334155;
         }
 
         .vaultline-feature-card span {
@@ -476,12 +621,21 @@
             }
 
             .vaultline-copy {
+                order: 1;
+            }
+
+            .video-label {
+                padding-bottom: 0;
+            }
+
+            .vaultline-video {
                 order: 2;
+                align-items: stretch;
                 padding-top: 2rem;
                 position: relative;
             }
 
-            .vaultline-copy::before {
+            .vaultline-video::before {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -492,13 +646,26 @@
                 background: #f1f5f7;
             }
 
-            .video-label {
-                padding-bottom: 0;
+            .vaultline-intro-row {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "title"
+                    "img"
+                    "para";
+                gap: 0.75rem;
             }
 
-            .vaultline-video {
-                order: 1;
-                align-items: stretch;
+            .vaultline-intro-image {
+                aspect-ratio: 4 / 3;
+            }
+
+            .vaultline-intro-title {
+                font-size: 1.1rem;
+                align-self: auto;
+            }
+
+            .vaultline-intro-paragraph {
+                align-self: auto;
             }
 
             .vaultline-copy h3 {
@@ -522,9 +689,25 @@
                 font-size: 0.98rem;
             }
 
+            .eyebrow {
+                max-width: 100%;
+            }
+
+            .eyebrow-text {
+                font-size: 0.6rem;
+            }
+
+            .hero-goodbye-headline {
+                font-size: 1.3rem;
+            }
+
             .hero-headline {
                 margin-bottom: 1.2rem;
                 text-align: center;
+            }
+
+            .hero-headline .eyebrow {
+                margin-bottom: 1.2rem;
             }
 
             .hero-content {
@@ -536,9 +719,27 @@
                 margin-bottom: 0.4rem;
             }
 
+            .hero-image-col {
+                align-items: center;
+            }
+
+            .hero-image-eyebrow {
+                align-self: center;
+                text-align: center;
+            }
+
+            .hero-image-eyebrow .eyebrow-text {
+                font-size: 0.65rem;
+                justify-content: center;
+            }
+
             .hero-text {
                 text-align: center;
                 align-items: center;
+            }
+
+            .hero-goodbye-item {
+                text-align: left;
             }
 
             .hero-text h2 {
@@ -578,19 +779,27 @@
         <div class="hero-inner">
             <!-- Hero Headline -->
             <div class="hero-headline">
-                <div class="eyebrow"><span class="eyebrow-text">This document is intended for prospective clients<br>conducting independent due diligence prior to a<br>scheduled consultation.</span></div>
-                <h1>Earn 6% Average Per Month<span class="asterisk">*</span> With Proven Algorithmic Trading</h1>
+                <div class="eyebrow"><span class="eyebrow-text">This document is intended for prospective clients conducting independent due diligence prior to a scheduled consultation.</span></div>
+                <h1>We Built Vaultline to Deliver Superior Risk-Adjusted Returns for Serious Investors</h1>
             </div>
 
             <!-- Two Column Content -->
             <div class="hero-content">
-                <div class="hero-image">
-                    <img src="assets/proof.png" alt="Proof image" onerror="this.onerror=null;this.src='assets/herobanner.png';">
+                <div class="hero-image-col">
+                    <div class="eyebrow hero-image-eyebrow"><span class="eyebrow-text">Independently Verified by Third Party <span class="myfxbook">MY<span class="fx">FX</span>BOOK</span></span></div>
+                    <div class="hero-image">
+                        <img src="assets/proof.png" alt="Proof image" onerror="this.onerror=null;this.src='assets/herobanner.png';">
+                    </div>
                 </div>
                 <div class="hero-text">
-                    <div class="hero-badge">Backed by Real Performance</div>
-                    <h2><span class="apy-large">+193% Total ROI</span> <span class="since">Since January 2025</span></h2>
-                    <p>Get full transparency with our Performance Validation Package in just 15 minutes — before you demo or invest.</p>
+                    <h2 class="hero-goodbye-headline">You've already built the wealth.<br>Now say goodbye to:</h2>
+                    <div class="hero-goodbye-list">
+                        <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L19 6.5V11.5C19 16 16 19.5 12 21C8 19.5 5 16 5 11.5V6.5L12 3Z" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="4" y1="20" x2="20" y2="4" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></span><span>Inflation quietly eating what you worked so hard for</span></div>
+                        <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8.5" stroke="#0b2540" stroke-width="2" fill="none"/><path d="M12 7.5V12L15 14" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="4" y1="20" x2="20" y2="4" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></span><span>The time and stress of figuring out what to invest in and when</span></div>
+                        <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 8L9.5 13.5L13 10L20 17" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 17H20V11.5" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="4" y1="20" x2="20" y2="4" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></span><span>Returns that move with the market — and crash with it</span></div>
+                        <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="11" width="14" height="9" rx="1" stroke="#0b2540" stroke-width="2" fill="none"/><path d="M8 11V8C8 5.791 9.791 4 12 4C14.209 4 16 5.791 16 8V11" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round"/><line x1="4" y1="20" x2="20" y2="4" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></span><span>Watching institutional investors win with tools you couldn't access</span></div>
+                        <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 3H18" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M6 21H18" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M7 3C7 7 9.5 9 12 11C14.5 9 17 7 17 3" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 21C7 17 9.5 15 12 13C14.5 15 17 17 17 21" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="4" y1="20" x2="20" y2="4" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></span><span>Waiting on slow returns when a portion of your portfolio could be working harder</span></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -598,24 +807,30 @@
     <section class="vaultline-info">
         <div class="vaultline-grid">
             <div class="vaultline-copy">
-                <div class="vaultline-eyebrow">Why Vaultline Trading Systems</div>
-                <h3>Outpacing the historical U.S. stock market averages of around 6-7%<span class="asterisk">*</span> inflated-adjusted returns.</h3>
+                <div class="vaultline-intro-row">
+                    <h3 class="vaultline-intro-title">Meet Our Co-Founder & Chief Technology Officer</h3>
+                    <div class="vaultline-intro-image">
+                        <img src="assets/founder.jpg" alt="Co-Founder & Chief Technology Officer">
+                    </div>
+                    <p class="vaultline-intro-paragraph">Hi, I am Angel John Renteria<br><br>With over 11 years of market experience, my team and I built Vaultline to help experienced investors like you reduce frustration and build real confidence in your capital — with truly hands-off and consistent risk-adjusted returns.</p>
+                </div>
+                <h4 class="vaultline-feature-subtitle">Why?</h4>
                 <div class="vaultline-feature-cards">
                     <div class="vaultline-feature-card">
-                        <svg class="vaultline-feature-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 5.5" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span>Superior Risk-Adjusted Returns</span>
+                        <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V19" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M7 18H17" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M4 8L12 6L20 9" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 8V12" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M20 9V13" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M1.5 12C1.5 13.66 2.74 15 4.25 15C5.76 15 7 13.66 7 12" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 13C17.5 14.66 18.59 16 20 16C21.41 16 22.5 14.66 22.5 13" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span>I was tired of doing everything right and still having no peace of mind about my money.<br><span class="vaultline-feature-tagline">I wanted something that I could trust, even when markets are slow.</span></span>
                     </div>
                     <div class="vaultline-feature-card">
-                        <svg class="vaultline-feature-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 5.5" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span>Institutional-Grade Risk Management</span>
+                        <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.9 8.6L22 9.3L16.8 14.1L18.2 21L12 17.3L5.8 21L7.2 14.1L2 9.3L9.1 8.6Z" stroke="#0b2540" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><clipPath id="halfstar1"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2L14.9 8.6L22 9.3L16.8 14.1L18.2 21L12 17.3L5.8 21L7.2 14.1L2 9.3L9.1 8.6Z" fill="#0b2540" stroke="none" clip-path="url(#halfstar1)"/></svg>
+                        <span>I was tired of being asked to trust systems I couldn't actually see or control.<br><span class="vaultline-feature-tagline">I wanted transparency without giving up custody or access to my funds.</span></span>
                     </div>
                     <div class="vaultline-feature-card">
-                        <svg class="vaultline-feature-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 5.5" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span>Execution Efficiency and Minimal Market Impact</span>
+                        <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 3L12 6L16 3L20 6C20 14 17 20 12 22C7 20 4 14 4 6Z" fill="#0b2540" stroke="none"/><path d="M7 11L9 9.3L11 11" stroke="#f1f5f7" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 11L15 9.3L17 11" stroke="#f1f5f7" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 14C9 17.5 15 17.5 17 14" stroke="#f1f5f7" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+                        <span>I was tired of strategies that looked great until conditions changed.<br><span class="vaultline-feature-tagline">I wanted something designed to survive uncertainty, not just perform in growing markets.</span></span>
                     </div>
                     <div class="vaultline-feature-card">
-                        <svg class="vaultline-feature-check" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5L8 14.5L16 5.5" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span>Personalization, Security, and Privacy</span>
+                        <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                        <span>I wanted one part of my portfolio that didn't demand my attention every day.<br><span class="vaultline-feature-tagline">Something steady I could trust to quietly do its job.</span></span>
                     </div>
                 </div>
             </div>
