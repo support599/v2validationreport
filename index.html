@@ -481,6 +481,44 @@
             align-items: stretch;
         }
 
+        .vaultline-video-step-label {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .vaultline-video-step-label span {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: #0b2540;
+        }
+
+        .vaultline-video-subheadline {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #0b2540;
+            text-align: left;
+        }
+
+        .vaultline-video-tagline {
+            margin: 0.5rem 0 0 0;
+            font-size: 0.95rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
+            color: #334155;
+            text-align: left;
+        }
+
+        .vaultline-chess-icon {
+            display: block;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
         .vaultline-video .eyebrow {
             margin-bottom: 0;
             white-space: pre-line;
@@ -835,10 +873,11 @@
                 </div>
             </div>
             <div class="vaultline-video">
-                <div class="eyebrow">Watch This Presentation On How It Works</div>
+                <div class="vaultline-video-step-label"><svg class="vaultline-chess-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg><span>STEP 1</span></div>
+                <h4 class="vaultline-video-subheadline">A Quick Word From Angel Before Your Scheduled Demonstration</h4>
                 <div class="video-frame">
                 <div class="video-wrap" data-video-id="SoMNR9LA-4A">
-                    <img src="https://img.youtube.com/vi/SoMNR9LA-4A/maxresdefault.jpg" alt="Vaultline Trading Systems Introduction" class="video-facade-thumb">
+                    <img src="assets/foundertn.png" alt="A Quick Word From Angel" class="video-facade-thumb">
                     <div class="video-facade-play">
                         <div class="play-btn-group">
                             <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg" class="yt-play-icon"><rect width="68" height="48" rx="10" fill="#FF0000"/><polygon points="27,12 27,36 47,24" fill="white"/></svg>
@@ -847,9 +886,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="video-label">
-                    <span class="video-label-sub">by Co-Founder & Chief Technology Officer<br>Angel John Renteria</span>
-                </div>
+                <p class="vaultline-video-tagline">Please watch for full context of what to expect on your call with our team.</p>
             </div>
         </div>
     </section>
