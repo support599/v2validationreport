@@ -378,6 +378,117 @@
             padding: 2.5rem 0;
         }
 
+        .pillars-section {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 2.5rem 0;
+        }
+
+        .pillars-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 0.75rem;
+        }
+
+        .pillars-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .pillars-heading-row {
+            margin-bottom: 2rem;
+        }
+
+        .pillars-title {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #0b2540;
+            text-align: left;
+        }
+
+        .pillars-intro-paragraph {
+            margin: 0 0 1.25rem 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #334155;
+            text-align: left;
+        }
+
+        .pillars-paragraph {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #334155;
+            text-align: left;
+        }
+
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .process-step-number {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            background: #0b2540;
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
+        }
+
+        .process-step-title {
+            margin: 0 0 0.25rem 0;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0b2540;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
+        }
+
+        .process-step-desc {
+            margin: 0;
+            font-size: 0.88rem;
+            line-height: 1.4;
+            color: #64748b;
+        }
+
+        .process-step-arrow {
+            width: 56px;
+            text-align: center;
+            color: #16a34a;
+            font-size: 1.1rem;
+            padding: 0.3rem 0;
+        }
+
+        .pillar-item {
+            align-items: flex-start;
+        }
+
+        .pillar-item-title {
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .pillar-item-desc {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #64748b;
+        }
+
         .resources-inner {
             max-width: 1000px;
             margin: 0 auto;
@@ -536,6 +647,43 @@
             font-weight: 700;
         }
 
+        .testimonial-title {
+            margin-top: 2rem;
+        }
+
+        .testimonial-nav-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(11, 37, 64, 0.15);
+            border-bottom: 1px solid rgba(11, 37, 64, 0.15);
+            padding: 0.75rem 0;
+            margin-bottom: 0.75rem;
+        }
+
+        .testimonial-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: #ffffff;
+            border: 1px solid rgba(11, 37, 64, 0.15);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .testimonial-arrow svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .testimonial-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0b2540;
+        }
+
         .resource-block-sub {
             margin: 0 0 1rem 0;
             font-size: 0.9rem;
@@ -649,6 +797,63 @@
             margin: 0;
             font-size: 0.78rem;
             line-height: 1.4;
+            color: #64748b;
+        }
+
+        .guarantee-block {
+            background: #ffffff;
+            border: 1px solid rgba(11, 37, 64, 0.12);
+            box-shadow: 0 10px 32px rgba(11, 23, 54, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .guarantee-logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee-logo-icon {
+            height: 1.6rem;
+            width: auto;
+        }
+
+        .guarantee-logo-name {
+            height: 1.1rem;
+            width: auto;
+        }
+
+        .guarantee-headline {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #0b2540;
+        }
+
+        .guarantee-tagline {
+            display: inline-block;
+            margin: 0;
+            background: #0f1720;
+            color: #ffffff;
+            font-size: 1.05rem;
+            font-weight: 700;
+            padding: 0.5rem 1.25rem;
+            border-radius: 999px;
+        }
+
+        .guarantee-tagline .asterisk {
+            font-size: 0.6em;
+            vertical-align: super;
+            margin-left: 0.1rem;
+        }
+
+        .guarantee-subtagline {
+            margin: 0.4rem 0 0 0;
+            font-size: 0.85rem;
             color: #64748b;
         }
 
@@ -1295,6 +1500,11 @@
                 font-size: 0.7rem;
             }
 
+            .pillars-columns {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
             .resources-title {
                 text-align: left;
             }
@@ -1765,6 +1975,29 @@
                         </div>
                     </div>
                     <a class="track-verify-btn" href="#">View Verified Data <span class="track-verify-arrow">→</span></a>
+                    <h3 class="resource-block-title testimonial-title">Client Testimonials</h3>
+                    <div class="testimonial-carousel">
+                        <div class="testimonial-nav-card">
+                            <button class="testimonial-arrow" id="testimonialPrev" aria-label="Previous testimonial">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 5L8 12L15 19" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                            <span class="testimonial-name" id="testimonialName">Amanda</span>
+                            <button class="testimonial-arrow" id="testimonialNext" aria-label="Next testimonial">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5L16 12L9 19" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                        <div class="video-frame">
+                            <div class="video-wrap" id="testimonialVideoWrap" data-video-id="QGK_cGc0oOw">
+                                <img id="testimonialThumb" src="https://img.youtube.com/vi/QGK_cGc0oOw/hqdefault.jpg" alt="Amanda testimonial" class="video-facade-thumb">
+                                <div class="video-facade-play">
+                                    <div class="play-btn-group">
+                                        <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg" class="yt-play-icon"><rect width="68" height="48" rx="10" fill="#FF0000"/><polygon points="27,12 27,36 47,24" fill="white"/></svg>
+                                        <span class="play-label">Play Now</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="resources-column-right">
                     <div class="resource-block">
@@ -1832,6 +2065,169 @@
                             </div>
                         </div>
                     </div>
+                    <div class="resource-block">
+                        <h3 class="resource-block-title">Legal Documents</h3>
+                        <div class="article-cards">
+                            <div class="article-card">
+                                <div class="article-card-header">
+                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
+                                    <span class="article-card-name">License Agreement Summary</span>
+                                    <span class="article-card-link">↗</span>
+                                </div>
+                                <p class="article-card-desc">A clear overview of your licensing terms and responsibilities.</p>
+                            </div>
+                            <div class="article-card">
+                                <div class="article-card-header">
+                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
+                                    <span class="article-card-name">Risk Disclosure</span>
+                                    <span class="article-card-link">↗</span>
+                                </div>
+                                <p class="article-card-desc">Important information about trading risks and potential losses.</p>
+                            </div>
+                            <div class="article-card">
+                                <div class="article-card-header">
+                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
+                                    <span class="article-card-name">Strategy Overview</span>
+                                    <span class="article-card-link">↗</span>
+                                </div>
+                                <p class="article-card-desc">How STRATA's algorithms identify, manage, and execute trades.</p>
+                            </div>
+                            <div class="article-card">
+                                <div class="article-card-header">
+                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
+                                    <span class="article-card-name">Privacy Policy</span>
+                                    <span class="article-card-link">↗</span>
+                                </div>
+                                <p class="article-card-desc">How Vaultline collects, uses, and protects your information.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guarantee-block">
+                        <div class="guarantee-logo-row">
+                            <img src="assets/logoicon.png" alt="Vaultline" class="guarantee-logo-icon">
+                            <img src="assets/logoname.png" alt="Vaultline" class="guarantee-logo-name">
+                        </div>
+                        <h3 class="guarantee-headline">When You Join Vaultline, You Become A Partner; Not A Client.</h3>
+                        <p class="guarantee-tagline">60-Day Money Back Guarantee<span class="asterisk">*</span></p>
+                        <p class="guarantee-subtagline">See details below</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pillars-section">
+        <div class="pillars-inner">
+            <div class="step2-row pillars-heading-row">
+                <h2 class="step2-headline"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>What's Next For You?</h2>
+            </div>
+            <div class="pillars-columns">
+                <div class="pillars-column">
+                    <div class="vaultline-intro-frame angel-card-frame">
+                    <div class="vaultline-intro-frame-inner">
+                    <h3 class="pillars-title">Vaultline's Core Strategy Pillars</h3>
+                    <p class="pillars-intro-paragraph">Vaultline is a private fintech software company providing automated algorithmic trading systems for forex, indices, and metals. Users retain full account control with transparent execution through regulated brokers.</p>
+                    <div class="hero-goodbye-list">
+                        <div class="hero-goodbye-item pillar-item">
+                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <span>
+                                <span class="pillar-item-title">Strategy Software Provider</span>
+                                <span class="pillar-item-desc">Execution only. Your capital always remains in an account under your name and control.</span>
+                            </span>
+                        </div>
+                        <div class="hero-goodbye-item pillar-item">
+                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <span>
+                                <span class="pillar-item-title">Multiple Algorithms, Multiple Strategies</span>
+                                <span class="pillar-item-desc">Built for different market conditions, combining multiple strategies for broader, more adaptable exposure.</span>
+                            </span>
+                        </div>
+                        <div class="hero-goodbye-item pillar-item">
+                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <span>
+                                <span class="pillar-item-title">Licensing Fee — No Performance Fees</span>
+                                <span class="pillar-item-desc">We do not share in your profits — everything earned in the account remains yours.</span>
+                            </span>
+                        </div>
+                        <div class="hero-goodbye-item pillar-item">
+                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <span>
+                                <span class="pillar-item-title">Verified by Independent Automated Trading Auditor</span>
+                                <span class="pillar-item-desc">Our record reflects real market conditions, including both exposure and subsequent gains.</span>
+                            </span>
+                        </div>
+                        <div class="hero-goodbye-item pillar-item">
+                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <span>
+                                <span class="pillar-item-title">Real Strategies — No Re-packaged Bots</span>
+                                <span class="pillar-item-desc">Vaultline uses original, purpose-built systems — not repackaged bots. Everything is proprietary built by real quants.</span>
+                            </span>
+                        </div>
+                        <div class="hero-goodbye-item pillar-item">
+                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            <span>
+                                <span class="pillar-item-title">Data-driven Risk Management</span>
+                                <span class="pillar-item-desc">The system is designed to protect your account first — growth is the outcome of disciplined risk management.</span>
+                            </span>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="pillars-column">
+                    <h3 class="pillars-title">Our Process After Joining Is Simple</h3>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="process-step-number">01</div>
+                            <div class="process-step-content">
+                                <h4 class="process-step-title">Your License Is Activated</h4>
+                                <p class="process-step-desc">Your agreement is finalized, access is confirmed, and your onboarding call is scheduled.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-arrow">↓</div>
+                        <div class="process-step">
+                            <div class="process-step-number">02</div>
+                            <div class="process-step-content">
+                                <h4 class="process-step-title">Set Up Your Brokerage &amp; Trading Account</h4>
+                                <p class="process-step-desc">We guide you through opening and funding your account. Your capital remains under your name and control.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-arrow">↓</div>
+                        <div class="process-step">
+                            <div class="process-step-number">03</div>
+                            <div class="process-step-content">
+                                <h4 class="process-step-title">Connect Our System — Execution Only</h4>
+                                <p class="process-step-desc">Your algorithmic trading system is configured, connected to your brokerage account, and tested before deployment.</p>
+                            </div>
+                        </div>
+                        <div class="process-step-arrow">↓</div>
+                        <div class="process-step">
+                            <div class="process-step-number">04</div>
+                            <div class="process-step-content">
+                                <h4 class="process-step-title">Live Trading Begins &amp; Ongoing Support</h4>
+                                <p class="process-step-desc">Once verified, the systems begin trading and you can monitor activity directly through your broker.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vaultline-intro-frame angel-card-frame">
+                        <div class="vaultline-intro-frame-inner">
+                            <h3 class="pillars-title">60-Day Money Back Guarantee</h3>
+                            <p class="pillars-intro-paragraph">Join with confidence. We will honor any refund if the criteria below is met —</p>
+                            <div class="hero-goodbye-list">
+                                <div class="hero-goodbye-item pillar-item">
+                                    <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                    <span>Onboard Within 30 Days of Joining.</span>
+                                </div>
+                                <div class="hero-goodbye-item pillar-item">
+                                    <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                    <span>Use the Software for 60 Days.</span>
+                                </div>
+                                <div class="hero-goodbye-item pillar-item">
+                                    <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                    <span>No Net Profit Was Generated By Day 60.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1844,8 +2240,8 @@
             var videoId = wrap.dataset.videoId;
             if (!videoId) return;
             var iframe = document.createElement('iframe');
-            iframe.src = 'https://www.youtube.com/embed/SoMNR9LA-4A?autoplay=1&rel=0';
-            iframe.title = 'Vaultline Trading Systems Introduction';
+            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
+            iframe.title = 'Video';
             iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
             iframe.allowFullscreen = true;
             iframe.loading = 'lazy';
@@ -2331,6 +2727,37 @@
                     trackBarChart.data.datasets[0].data = trackBarData[year].values;
                     trackBarChart.update();
                 });
+            });
+
+            var testimonials = [
+                { name: 'Amanda', id: 'QGK_cGc0oOw' },
+                { name: 'Ryan', id: 'u-0a28MqdmY' },
+                { name: 'Adolfo', id: 'C_9ptnYbe-I' },
+                { name: 'Sebastian', id: 'AqWzGTE3XgE' },
+                { name: 'Batuhan', id: '5dM5ihkgUoI' }
+            ];
+            var testimonialIndex = 0;
+
+            function renderTestimonial() {
+                var t = testimonials[testimonialIndex];
+                document.getElementById('testimonialName').textContent = t.name;
+                var wrap = document.getElementById('testimonialVideoWrap');
+                wrap.dataset.videoId = t.id;
+                wrap.innerHTML =
+                    '<img id="testimonialThumb" src="https://img.youtube.com/vi/' + t.id + '/hqdefault.jpg" alt="' + t.name + ' testimonial" class="video-facade-thumb">' +
+                    '<div class="video-facade-play"><div class="play-btn-group">' +
+                    '<svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg" class="yt-play-icon"><rect width="68" height="48" rx="10" fill="#FF0000"/><polygon points="27,12 27,36 47,24" fill="white"/></svg>' +
+                    '<span class="play-label">Play Now</span></div></div>';
+            }
+
+            document.getElementById('testimonialPrev').addEventListener('click', function () {
+                testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+                renderTestimonial();
+            });
+
+            document.getElementById('testimonialNext').addEventListener('click', function () {
+                testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+                renderTestimonial();
             });
         })();
     </script>
