@@ -37,6 +37,7 @@
 
         nav {
             display: flex;
+            align-items: center;
             justify-content: center;
             background-color: #0f1720;
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -45,6 +46,19 @@
             top: 0;
             z-index: 100;
             isolation: isolate;
+        }
+
+        .nav-left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
         }
 
         .nav-logo {
@@ -447,6 +461,7 @@
             font-size: 1.4rem;
             font-weight: 700;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
+            border-radius: 50%;
         }
 
         .process-step-title {
@@ -851,6 +866,22 @@
             margin-left: 0.1rem;
         }
 
+        .mbg-standalone {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .mbg-criteria-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-top: 1rem;
+            align-items: center;
+        }
+
         .guarantee-subtagline {
             margin: 0.4rem 0 0 0;
             font-size: 0.85rem;
@@ -901,11 +932,33 @@
             color: #0b2540;
         }
 
+        .step2-column-body {
+            margin: 0.4rem 0 0 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: #475569;
+        }
+
+        .step2-body {
+            margin: 0.5rem 0 0 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: #475569;
+            max-width: 640px;
+            text-align: center;
+        }
+
         .step2-columns {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
             margin-top: 2rem;
+        }
+
+        .step2-column {
+            min-width: 0;
         }
 
         .step2-column-title {
@@ -922,6 +975,9 @@
             border: 1px solid rgba(11, 37, 64, 0.12);
             box-shadow: 0 10px 32px rgba(11, 23, 54, 0.1);
             padding: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
         }
 
         .calc-amount-label {
@@ -1029,6 +1085,8 @@
             max-height: 320px;
             position: relative;
             isolation: isolate;
+            width: 100%;
+            box-sizing: border-box;
         }
 
 
@@ -1525,6 +1583,10 @@
                 gap: 0.6rem;
             }
 
+            .step2-body {
+                text-align: left;
+            }
+
             .step2-headline {
                 font-size: 1.4rem;
             }
@@ -1692,11 +1754,190 @@
                 color: #475569;
             }
         }
+        .nav-section-label {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.55);
+            min-width: 80px;
+            perspective: 400px;
+            display: block;
+        }
+
+        .nav-section-label.flip {
+            animation: nav-label-flip 0.32s ease both;
+        }
+
+        @keyframes nav-label-flip {
+            0%  { opacity: 0; transform: rotateX(-80deg); }
+            100%{ opacity: 1; transform: rotateX(0deg); }
+        }
+
+        .nav-menu-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.25rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu-btn svg {
+            width: 22px;
+            height: 22px;
+            display: block;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 62px;
+            right: 1rem;
+            background: #0f1720;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+            z-index: 150;
+            width: 190px;
+        }
+
+        .mobile-menu.open {
+            display: block;
+        }
+
+        .mobile-menu-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.55rem 0.85rem;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .mobile-menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu-num {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.58rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.3);
+            flex-shrink: 0;
+            width: 16px;
+        }
+
+        .mobile-menu-label {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+            letter-spacing: 0.01em;
+        }
+
+        .site-footer {
+            background: #0f1720;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .site-footer-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .footer-logo-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-logo-icon {
+            height: 1.8rem;
+            width: auto;
+        }
+
+        .footer-logo-name {
+            height: 1.2rem;
+            width: auto;
+        }
+
+        .footer-social-row {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .footer-social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.6);
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .footer-social-link:hover {
+            color: #ffffff;
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .footer-social-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .footer-disclaimer {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            width: 100%;
+        }
+
+        .footer-disclaimer p {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
+            font-size: 0.75rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.35);
+            text-align: left;
+        }
+
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .footer-copy {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.3);
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
+        <div class="nav-left">
+            <span class="nav-section-label" id="navSectionLabel"></span>
+        </div>
         <div class="nav-logo">
             <img src="assets/logoicon2.png" alt="Logo Icon">
             <div class="nav-text">
@@ -1704,7 +1945,45 @@
                 <div class="nav-tagline">Algorithmic Trading Systems</div>
             </div>
         </div>
+        <div class="nav-right">
+            <button class="nav-menu-btn" id="navMenuBtn" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="6" x2="21" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="12" x2="21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="18" x2="21" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+        </div>
     </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-list">
+            <a class="mobile-menu-item" href="#section-cofounder" data-menu-item>
+                <span class="mobile-menu-num">01</span>
+                <span class="mobile-menu-label">Meet Co-Founder</span>
+            </a>
+            <a class="mobile-menu-item" href="#section-demo" data-menu-item>
+                <span class="mobile-menu-num">02</span>
+                <span class="mobile-menu-label">Demo Expectations</span>
+            </a>
+            <a class="mobile-menu-item" href="#section-faq" data-menu-item>
+                <span class="mobile-menu-num">03</span>
+                <span class="mobile-menu-label">FAQs</span>
+            </a>
+            <a class="mobile-menu-item" href="#section-thesis" data-menu-item>
+                <span class="mobile-menu-num">04</span>
+                <span class="mobile-menu-label">Investment Thesis</span>
+            </a>
+            <a class="mobile-menu-item" href="#section-architecture" data-menu-item>
+                <span class="mobile-menu-num">05</span>
+                <span class="mobile-menu-label">Architecture Presentation</span>
+            </a>
+            <a class="mobile-menu-item" href="#section-resources" data-menu-item>
+                <span class="mobile-menu-num">06</span>
+                <span class="mobile-menu-label">Resources &amp; Performance</span>
+            </a>
+            <a class="mobile-menu-item" href="#section-start" data-menu-item>
+                <span class="mobile-menu-num">07</span>
+                <span class="mobile-menu-label">How To Start</span>
+            </a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -1738,7 +2017,7 @@
             </div>
         </div>
     </section>
-    <section class="vaultline-info">
+    <section class="vaultline-info" id="section-cofounder">
         <div class="vaultline-grid">
             <div class="vaultline-copy">
                 <div class="vaultline-intro-frame">
@@ -1776,7 +2055,7 @@
                 </div>
                 <p class="vaultline-closing-tagline">If you're here, it's likely because parts of this already sound like you — and you're looking for a secure way to grow a portion of your portfolio that isn't tied to what you already own.</p>
             </div>
-            <div class="vaultline-video">
+            <div class="vaultline-video" id="section-demo">
                 <h4 class="vaultline-video-subheadline"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>A Quick Word From Angel Before Your Scheduled Demonstration</h4>
                 <div class="video-frame">
                 <div class="video-wrap" data-video-id="SoMNR9LA-4A">
@@ -1791,7 +2070,7 @@
                 </div>
                 <p class="vaultline-video-tagline">Please watch for full context of what to expect on your call with our team.</p>
                 <div class="vaultline-section-divider"></div>
-                <h4 class="vaultline-video-subheadline vaultline-faq-subheadline">Answers to more of your questions.</h4>
+                <h4 class="vaultline-video-subheadline vaultline-faq-subheadline" id="section-faq">Answers to more of your questions.</h4>
                 <select class="vaultline-faq-search" id="faqSelect" onchange="document.getElementById('faqVideoTitle').textContent = this.options[this.selectedIndex].text;">
                     <option value="" disabled selected>Search or select a question...</option>
                     <optgroup label="Trust & Safety">
@@ -1833,16 +2112,18 @@
             </div>
         </div>
     </section>
-    <section class="step2-section">
+    <section class="step2-section" id="section-thesis">
         <div class="step2-inner">
             <div class="step2-row">
                 <h2 class="step2-headline"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>Why Algorithmic Trading?</h2>
+                <p class="step2-body">Systematic trading strategies have become a core allocation for many institutional portfolios because they offer a return stream that can complement traditional equity and fixed income investments.</p>
             </div>
             <div class="step2-columns">
                 <div class="step2-column">
-                    <h3 class="step2-column-title">Uncorrelated, Automated Exposure</h3>
+                    <h3 class="step2-column-title">Diversified Automated Return Stream</h3>
+                    <p class="step2-column-body">Compare Vaultline's historical performance against traditional asset classes and observe how its return profile differs from equities, gold, and crypto.</p>
                     <div class="compare-widget" id="compareWidget">
-                        <h4 class="calc-amount-label">See how Vaultline compares to other asset classes</h4>
+                        <h4 class="calc-amount-label">How Vaultline Has Performed Relative to Traditional Investments</h4>
                         <div class="compare-widget-tabs">
                             <button class="compare-tab active" data-view="chart">Chart</button>
                             <button class="compare-tab" data-view="table">Table</button>
@@ -1871,7 +2152,8 @@
                     <p class="compare-disclaimer">Past performance is not indicative of future results. Strata performance is sourced live from Myfxbook, with live data tracking since January 2025 when we went public; comparison asset data (S&P 500, Gold, Crypto) is historical and shown for illustrative comparison only.</p>
                 </div>
                 <div class="step2-column">
-                    <h3 class="step2-column-title">What That Looks Like On A Portion Of Your Portfolio</h3>
+                    <h3 class="step2-column-title">Hypothetical Portfolio Impact</h3>
+                    <p class="step2-column-body">Explore how different hypothetical allocations would have grown over time based on historical strategy performance.</p>
                     <div class="compare-widget" id="calcWidget">
                         <p class="calc-amount-label">Select Starting Amount To Simulate Opportunity Cost</p>
                         <div class="compare-widget-timeframes">
@@ -1903,18 +2185,18 @@
             <p class="section-general-disclaimer">This content is for informational purposes only and does not constitute financial or investment advice. Please consult a licensed financial advisor before making investment decisions.</p>
         </div>
     </section>
-    <section class="angel-video-section">
+    <section class="angel-video-section" id="section-architecture">
         <div class="angel-video-inner">
             <div class="angel-video-grid">
                 <div class="angel-video-text">
                     <h2 class="angel-video-subheadline">Watch Angel Explain How It Works</h2>
                     <div class="video-agenda-grid">
-                        <div class="video-agenda-card"><span class="video-agenda-number">01</span><span class="video-agenda-title">Our Live Results</span></div>
-                        <div class="video-agenda-card"><span class="video-agenda-number">02</span><span class="video-agenda-title">Why Algorithmic Trading</span></div>
-                        <div class="video-agenda-card"><span class="video-agenda-number">03</span><span class="video-agenda-title">How Vaultline Works</span></div>
-                        <div class="video-agenda-card"><span class="video-agenda-number">04</span><span class="video-agenda-title">AI Risk Management</span></div>
-                        <div class="video-agenda-card"><span class="video-agenda-number">05</span><span class="video-agenda-title">Who This Is For</span></div>
-                        <div class="video-agenda-card"><span class="video-agenda-number">06</span><span class="video-agenda-title">How to Get Involved</span></div>
+                        <div class="video-agenda-card"><span class="video-agenda-number">01</span><span class="video-agenda-title">Performance Overview</span></div>
+                        <div class="video-agenda-card"><span class="video-agenda-number">02</span><span class="video-agenda-title">Investment Thesis</span></div>
+                        <div class="video-agenda-card"><span class="video-agenda-number">03</span><span class="video-agenda-title">Strategy Architecture</span></div>
+                        <div class="video-agenda-card"><span class="video-agenda-number">04</span><span class="video-agenda-title">Risk Management</span></div>
+                        <div class="video-agenda-card"><span class="video-agenda-number">05</span><span class="video-agenda-title">Investor Eligibility</span></div>
+                        <div class="video-agenda-card"><span class="video-agenda-number">06</span><span class="video-agenda-title">Getting Started</span></div>
                     </div>
                     <div class="video-frame">
                         <div class="video-wrap" data-video-id="SoMNR9LA-4A">
@@ -1933,11 +2215,11 @@
                         <div class="vaultline-intro-frame-inner">
                             <h2 class="hero-goodbye-headline"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>Risk-Adjusted Automation, For Security and Consistency.</h2>
                             <div class="hero-goodbye-list">
-                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Automated risk controls that adjust exposure in real time</span></div>
-                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Consistent, rules-based execution with no emotional decision-making</span></div>
-                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Capital security through verified, non-custodial fund access</span></div>
-                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Performance independently tracked by a third-party verifier</span></div>
-                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Built to perform across changing market conditions</span></div>
+                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Dynamic exposure management based on predefined risk parameters</span></div>
+                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Systematic execution eliminates discretionary decision-making</span></div>
+                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Non-custodial account structure designed to keep investors in control of their capital</span></div>
+                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Third-party performance verification for transparency and accountability</span></div>
+                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Adaptive strategy framework designed for changing market environments</span></div>
                             </div>
                         </div>
                     </div>
@@ -1945,7 +2227,7 @@
             </div>
         </div>
     </section>
-    <section class="resources-section">
+    <section class="resources-section" id="section-resources">
         <div class="resources-inner">
             <h2 class="resources-title"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>Resources</h2>
             <div class="resources-columns">
@@ -2115,7 +2397,7 @@
             </div>
         </div>
     </section>
-    <section class="pillars-section">
+    <section class="pillars-section" id="section-start">
         <div class="pillars-inner">
             <div class="step2-row pillars-heading-row">
                 <h2 class="step2-headline"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>What's Next For You?</h2>
@@ -2124,50 +2406,35 @@
                 <div class="pillars-column">
                     <div class="vaultline-intro-frame angel-card-frame">
                     <div class="vaultline-intro-frame-inner">
-                    <h3 class="pillars-title">Vaultline's Core Strategy Pillars</h3>
+                    <div class="guarantee-logo-row" style="margin-bottom:1.25rem;">
+                        <img src="assets/logoicon.png" alt="Vaultline" class="guarantee-logo-icon">
+                        <img src="assets/logoname.png" alt="Vaultline" class="guarantee-logo-name">
+                    </div>
                     <p class="pillars-intro-paragraph">Vaultline is a private fintech software company providing automated algorithmic trading systems for forex, indices, and metals. Users retain full account control with transparent execution through regulated brokers.</p>
                     <div class="hero-goodbye-list">
                         <div class="hero-goodbye-item pillar-item">
                             <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span>
-                                <span class="pillar-item-title">Strategy Software Provider</span>
-                                <span class="pillar-item-desc">Execution only. Your capital always remains in an account under your name and control.</span>
-                            </span>
+                            <span class="pillar-item-title">Strategy Software Provider</span>
                         </div>
                         <div class="hero-goodbye-item pillar-item">
                             <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span>
-                                <span class="pillar-item-title">Multiple Algorithms, Multiple Strategies</span>
-                                <span class="pillar-item-desc">Built for different market conditions, combining multiple strategies for broader, more adaptable exposure.</span>
-                            </span>
+                            <span class="pillar-item-title">Multiple Algorithms, Multiple Strategies</span>
                         </div>
                         <div class="hero-goodbye-item pillar-item">
                             <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span>
-                                <span class="pillar-item-title">Licensing Fee — No Performance Fees</span>
-                                <span class="pillar-item-desc">We do not share in your profits — everything earned in the account remains yours.</span>
-                            </span>
+                            <span class="pillar-item-title">Licensing Fee — No Performance Fees</span>
                         </div>
                         <div class="hero-goodbye-item pillar-item">
                             <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span>
-                                <span class="pillar-item-title">Verified by Independent Automated Trading Auditor</span>
-                                <span class="pillar-item-desc">Our record reflects real market conditions, including both exposure and subsequent gains.</span>
-                            </span>
+                            <span class="pillar-item-title">Verified by Independent Automated Trading Auditor</span>
                         </div>
                         <div class="hero-goodbye-item pillar-item">
                             <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span>
-                                <span class="pillar-item-title">Real Strategies — No Re-packaged Bots</span>
-                                <span class="pillar-item-desc">Vaultline uses original, purpose-built systems — not repackaged bots. Everything is proprietary built by real quants.</span>
-                            </span>
+                            <span class="pillar-item-title">Real Strategies — No Re-packaged Bots</span>
                         </div>
                         <div class="hero-goodbye-item pillar-item">
                             <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span>
-                                <span class="pillar-item-title">Data-driven Risk Management</span>
-                                <span class="pillar-item-desc">The system is designed to protect your account first — growth is the outcome of disciplined risk management.</span>
-                            </span>
+                            <span class="pillar-item-title">Data-driven Risk Management</span>
                         </div>
                     </div>
                     </div>
@@ -2209,25 +2476,23 @@
                         </div>
                     </div>
                     <div class="vaultline-intro-frame angel-card-frame">
-                        <div class="vaultline-intro-frame-inner">
-                            <h3 class="pillars-title">60-Day Money Back Guarantee</h3>
-                            <p class="pillars-intro-paragraph">Join with confidence. We will honor any refund if the criteria below is met —</p>
-                            <div class="hero-goodbye-list">
-                                <div class="hero-goodbye-item pillar-item">
-                                    <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                                    <span>Onboard Within 30 Days of Joining.</span>
-                                </div>
-                                <div class="hero-goodbye-item pillar-item">
-                                    <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                                    <span>Use the Software for 60 Days.</span>
-                                </div>
-                                <div class="hero-goodbye-item pillar-item">
-                                    <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                                    <span>No Net Profit Was Generated By Day 60.</span>
-                                </div>
-                            </div>
+                        <div class="vaultline-intro-frame-inner" style="text-align:center;">
+                            <p class="pillars-intro-paragraph" style="margin:0;">For more questions and support, please contact us at (XXX) XXX-XXXX</p>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="mbg-standalone">
+                <div class="guarantee-logo-row" style="margin-bottom:1rem;">
+                    <img src="assets/logoicon.png" alt="Vaultline" class="guarantee-logo-icon">
+                    <img src="assets/logoname.png" alt="Vaultline" class="guarantee-logo-name">
+                </div>
+                <h3 class="pillars-title" style="text-align:center;">60-Day Money Back Guarantee</h3>
+                <p class="pillars-intro-paragraph" style="text-align:center;">Join with confidence. We will honor any refund if the criteria below is met —</p>
+                <div class="mbg-criteria-list">
+                    <span class="guarantee-tagline">Onboard Within 30 Days of Joining</span>
+                    <span class="guarantee-tagline">Use the Software for 60 Days</span>
+                    <span class="guarantee-tagline">No Net Profit Was Generated By Day 60</span>
                 </div>
             </div>
         </div>
@@ -2759,6 +3024,95 @@
                 testimonialIndex = (testimonialIndex + 1) % testimonials.length;
                 renderTestimonial();
             });
+        })();
+    </script>
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="footer-logo-row">
+                <img src="assets/logoicon2.png" alt="Vaultline" class="footer-logo-icon">
+                <img src="assets/logoname2.png" alt="Vaultline" class="footer-logo-name">
+            </div>
+            <div class="footer-social-row">
+                <a href="#" class="footer-social-link" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" class="footer-social-link" aria-label="YouTube">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0f1720"/></svg>
+                </a>
+                <a href="#" class="footer-social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="#0f1720"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#0f1720" stroke-width="2" stroke-linecap="round"/></svg>
+                </a>
+                <a href="#" class="footer-social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+            <div class="footer-disclaimer">
+                <p>Trading foreign exchange, CFDs, and other leveraged products involves a substantial risk of loss and may not be suitable for all investors. Past performance, including independently tracked results, does not guarantee future performance.</p>
+                <p>Performance figures presented by Vaultline are based on live, broker-connected trading accounts and independently tracked through Myfxbook. Individual results may vary due to market conditions, broker execution, leverage, spreads, commissions, slippage, account configuration, and other factors.</p>
+                <p>Vaultline provides algorithmic trading software and technology services. Vaultline does not provide personalized investment advice, does not take custody of client funds, and is not a registered investment adviser. Client capital remains in the client's own brokerage account at all times.</p>
+                <p>Before using any Vaultline service, carefully consider your financial objectives, trading experience, and tolerance for risk. Never trade with funds you cannot afford to lose, and seek independent financial or professional advice when appropriate.</p>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copy">NexVision Technologies Corp &copy; Copyright 2025. All Rights Reserved</p>
+            <p class="footer-copy">You can find more information and legal documentation @ www.vaultline.co</p>
+        </div>
+    </footer>
+    <script>
+        (function () {
+            var btn = document.getElementById('navMenuBtn');
+            var menu = document.getElementById('mobileMenu');
+            var labelEl = document.getElementById('navSectionLabel');
+            if (!btn || !menu) return;
+
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                menu.classList.toggle('open');
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!menu.contains(e.target) && e.target !== btn) {
+                    menu.classList.remove('open');
+                }
+            });
+
+            menu.querySelectorAll('[data-menu-item]').forEach(function (link) {
+                link.addEventListener('click', function () { menu.classList.remove('open'); });
+            });
+
+            if (!labelEl) return;
+            var sections = [
+                { id: 'section-cofounder', label: 'Meet Co-Founder' },
+                { id: 'section-demo',      label: 'Demo Expectations' },
+                { id: 'section-faq',       label: 'FAQs' },
+                { id: 'section-thesis',    label: 'Investment Thesis' },
+                { id: 'section-architecture', label: 'Architecture' },
+                { id: 'section-resources', label: 'Resources & Performance' },
+                { id: 'section-start',     label: 'How To Start' },
+            ];
+            var currentLabel = '';
+            var navHeight = document.querySelector('nav').offsetHeight;
+
+            function updateLabel() {
+                var scrollY = window.scrollY;
+                var active = null;
+                sections.forEach(function (s) {
+                    var el = document.getElementById(s.id);
+                    if (el && el.getBoundingClientRect().top <= navHeight + 40) {
+                        active = s;
+                    }
+                });
+                var newLabel = active ? active.label : '';
+                if (newLabel !== currentLabel) {
+                    currentLabel = newLabel;
+                    labelEl.classList.remove('flip');
+                    void labelEl.offsetWidth;
+                    labelEl.textContent = newLabel;
+                    if (newLabel) labelEl.classList.add('flip');
+                }
+            }
+
+            window.addEventListener('scroll', updateLabel, { passive: true });
+            updateLabel();
         })();
     </script>
 </body>
