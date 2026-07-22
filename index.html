@@ -777,10 +777,19 @@
         }
 
         .article-card {
+            display: block;
             background: #ffffff;
             border: 1px solid rgba(11, 37, 64, 0.12);
             padding: 1rem;
             text-align: left;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            transition: border-color 0.15s;
+        }
+
+        .article-card:hover {
+            border-color: rgba(11, 37, 64, 0.35);
         }
 
         .article-card-header {
@@ -1164,17 +1173,33 @@
         }
 
         .vaultline-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 2rem;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            max-width: 1000px;
+            max-width: 760px;
             margin: 0 auto;
             padding: 1.5rem 0.75rem 2rem;
             background-color: #ffffff;
-            border-radius: 24px;
+            border-radius: 0;
             box-shadow: none;
             border: none;
+        }
+
+        .why-faq-section {
+            display: grid;
+            grid-template-columns: 1fr 0.8fr;
+            align-items: start;
+        }
+
+        .faq-column {
+            background: #ffffff;
+            padding: 2.5rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            border-left: 1px solid rgba(11, 37, 64, 0.08);
+            min-height: 100%;
+            box-sizing: border-box;
         }
 
         .vaultline-copy {
@@ -1362,7 +1387,7 @@
             font-weight: 400;
             line-height: 1.3;
             color: #0b2540;
-            text-align: left;
+            text-align: center;
         }
 
         .vaultline-video-tagline {
@@ -1370,7 +1395,7 @@
             font-size: 0.95rem;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'San Francisco', sans-serif;
             color: #334155;
-            text-align: left;
+            text-align: center;
         }
 
         .vaultline-section-divider {
@@ -1382,7 +1407,7 @@
         }
 
         .vaultline-faq-subheadline {
-            margin-top: 1.5rem;
+            margin-top: 0;
         }
 
         .vaultline-faq-search {
@@ -1548,6 +1573,18 @@
             color: #334155;
         }
 
+        @media (max-width: 1000px) {
+            .why-faq-section {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-column {
+                border-left: none;
+                border-top: 1px solid rgba(11, 37, 64, 0.08);
+                padding: 2rem 1.5rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .video-agenda-card {
                 padding: 0.45rem 0.5rem;
@@ -1610,34 +1647,12 @@
                 text-align: left;
             }
 
-            .vaultline-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .vaultline-copy {
-                order: 1;
-            }
-
             .video-label {
                 padding-bottom: 0;
             }
 
-            .vaultline-video {
-                order: 2;
-                align-items: stretch;
-                padding-top: 2rem;
-                position: relative;
-            }
-
-            .vaultline-video::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                border-radius: 999px;
-                background: #f1f5f7;
+            .faq-column {
+                padding: 2rem 1rem;
             }
 
             .vaultline-intro-row {
@@ -2055,44 +2070,9 @@
                 </div>
                 <p class="vaultline-closing-tagline">If you're here, it's likely because parts of this already sound like you — and you're looking for a secure way to grow a portion of your portfolio that isn't tied to what you already own.</p>
             </div>
-            <div class="vaultline-video" id="section-demo">
-                <div class="vaultline-section-divider"></div>
-                <h4 class="vaultline-video-subheadline vaultline-faq-subheadline" id="section-faq">FAQ Short Videos</h4>
-                <p class="vaultline-video-tagline" style="margin-bottom:0.75rem;">For Quick Clarity</p>
-                <select class="vaultline-faq-search" id="faqSelect">
-                    <option value="" disabled selected>Search or select a question...</option>
-                    <optgroup label="Trust &amp; Safety">
-                        <option value="u0oJaiN2ic0">How do I know this isn't a scam?</option>
-                        <option value="VetR-JXAxxA">Who actually holds my money — is it in your account or mine?</option>
-                        <option value="_LMZhV5PEts">Can I take my money out whenever I want?</option>
-                        <option value="O6Zii7Tjk1g">How do I know the results are real and not cherry-picked?</option>
-                    </optgroup>
-                    <optgroup label="The Product">
-                        <option value="g8pT5GxWPF0">Do I have to sit and watch charts all day or does it run itself?</option>
-                        <option value="n0YDltiafGE">I already have property and stocks — where does this fit in?</option>
-                        <option value="BNLLP359fss">What happens to my money if the market crashes?</option>
-                    </optgroup>
-                    <optgroup label="Getting Started">
-                        <option value="nEDbK3S7Kgo">How much money do I need to get started?</option>
-                        <option value="EuapQeplINI">What account do I need to open and how does that work?</option>
-                    </optgroup>
-                    <optgroup label="Performance &amp; Risk">
-                        <option value="Qvr4hb7lhOQ">What kind of returns are people actually seeing?</option>
-                        <option value="vLepn6FwCxQ">What's the worst case scenario — how much could I lose?</option>
-                        <option value="UcIHjbtYI7g">You can't guarantee future returns — so why should I trust the numbers?</option>
-                    </optgroup>
-                    <optgroup label="The Team">
-                        <option value="fqqnAeQw9tA">Who are the people behind this and why should I trust them?</option>
-                        <option value="7m3Im7eBxTg">How is this any different from just using a financial adviser?</option>
-                    </optgroup>
-                </select>
-                <h5 class="vaultline-faq-video-title" id="faqVideoTitle" style="display:none;"></h5>
-                <div class="video-frame" id="faqVideoFrame" style="display:none;">
-                    <iframe id="faqIframe" src="" title="FAQ Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:16/9;border:none;display:block;"></iframe>
-                </div>
-            </div>
         </div>
     </section>
+    <div class="why-faq-section">
     <section class="step2-section" id="section-thesis">
         <div class="step2-inner">
             <div class="step2-row">
@@ -2166,6 +2146,42 @@
             <p class="section-general-disclaimer">This content is for informational purposes only and does not constitute financial or investment advice. Please consult a licensed financial advisor before making investment decisions.</p>
         </div>
     </section>
+    <div class="faq-column" id="section-demo">
+        <h4 class="vaultline-video-subheadline vaultline-faq-subheadline" id="section-faq">FAQ Short Videos</h4>
+        <p class="vaultline-video-tagline" style="margin-bottom:0.75rem;">For Quick Clarity</p>
+        <select class="vaultline-faq-search" id="faqSelect">
+            <option value="" disabled selected>Search or select a question...</option>
+            <optgroup label="Trust &amp; Safety">
+                <option value="u0oJaiN2ic0">How do I know this isn't a scam?</option>
+                <option value="VetR-JXAxxA">Who actually holds my money — is it in your account or mine?</option>
+                <option value="_LMZhV5PEts">Can I take my money out whenever I want?</option>
+                <option value="O6Zii7Tjk1g">How do I know the results are real and not cherry-picked?</option>
+            </optgroup>
+            <optgroup label="The Product">
+                <option value="g8pT5GxWPF0">Do I have to sit and watch charts all day or does it run itself?</option>
+                <option value="n0YDltiafGE">I already have property and stocks — where does this fit in?</option>
+                <option value="BNLLP359fss">What happens to my money if the market crashes?</option>
+            </optgroup>
+            <optgroup label="Getting Started">
+                <option value="nEDbK3S7Kgo">How much money do I need to get started?</option>
+                <option value="EuapQeplINI">What account do I need to open and how does that work?</option>
+            </optgroup>
+            <optgroup label="Performance &amp; Risk">
+                <option value="Qvr4hb7lhOQ">What kind of returns are people actually seeing?</option>
+                <option value="vLepn6FwCxQ">What's the worst case scenario — how much could I lose?</option>
+                <option value="UcIHjbtYI7g">You can't guarantee future returns — so why should I trust the numbers?</option>
+            </optgroup>
+            <optgroup label="The Team">
+                <option value="fqqnAeQw9tA">Who are the people behind this and why should I trust them?</option>
+                <option value="7m3Im7eBxTg">How is this any different from just using a financial adviser?</option>
+            </optgroup>
+        </select>
+        <h5 class="vaultline-faq-video-title" id="faqVideoTitle" style="display:none;"></h5>
+        <div class="video-frame" id="faqVideoFrame" style="display:none;">
+            <iframe id="faqIframe" src="" title="FAQ Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:16/9;border:none;display:block;"></iframe>
+        </div>
+    </div>
+    </div>
     <section class="angel-video-section" id="section-architecture">
         <div class="angel-video-inner">
             <div class="angel-video-grid">
@@ -2294,75 +2310,75 @@
                     <div class="resource-block">
                         <h3 class="resource-block-title">Published Articles</h3>
                         <div class="article-cards">
-                            <div class="article-card">
+                            <a class="article-card" href="#" target="_blank">
                                 <div class="article-card-header">
                                     <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#fff" stroke="rgba(11,37,64,0.15)"/><text x="16" y="21" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#dc2626" text-anchor="middle">AP</text></svg>
                                     <span class="article-card-name">AP News</span>
                                     <span class="article-card-link">↗</span>
                                 </div>
                                 <p class="article-card-desc">Vaultline Launches Strata: A Precision Algorithmic Trading System for Retail...</p>
-                            </div>
-                            <div class="article-card">
+                            </a>
+                            <a class="article-card" href="#" target="_blank">
                                 <div class="article-card-header">
                                     <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#f59e0b"/><text x="16" y="21" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">b</text></svg>
                                     <span class="article-card-name">Barchart</span>
                                     <span class="article-card-link">↗</span>
                                 </div>
                                 <p class="article-card-desc">Vaultline Launches Strata: A Precision Algorithmic Trading System for Retail...</p>
-                            </div>
-                            <div class="article-card">
+                            </a>
+                            <a class="article-card" href="#" target="_blank">
                                 <div class="article-card-header">
                                     <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><text x="16" y="20" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">SI</text></svg>
                                     <span class="article-card-name">Street Insider</span>
                                     <span class="article-card-link">↗</span>
                                 </div>
                                 <p class="article-card-desc">Vaultline Launches Strata: A Precision Algorithmic Trading System for Retail...</p>
-                            </div>
-                            <div class="article-card">
+                            </a>
+                            <a class="article-card" href="#" target="_blank">
                                 <div class="article-card-header">
                                     <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#fef3c7"/><path d="M16 8L18 13H23L19 16.5L20.5 22L16 18.5L11.5 22L13 16.5L9 13H14Z" fill="#d97706"/></svg>
                                     <span class="article-card-name">Best of Best Review</span>
                                     <span class="article-card-link">↗</span>
                                 </div>
                                 <p class="article-card-desc">Best Algorithmic Trading Software for Retail Traders in Portland — 2026</p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="resource-block">
                         <h3 class="resource-block-title">Legal Documents</h3>
                         <div class="article-cards">
-                            <div class="article-card">
+                            <a class="article-card" href="assets/Vaultline_Agreement_Overview.pdf" target="_blank">
                                 <div class="article-card-header">
                                     <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
                                     <span class="article-card-name">License Agreement Summary</span>
                                     <span class="article-card-link">↗</span>
                                 </div>
                                 <p class="article-card-desc">A clear overview of your licensing terms and responsibilities.</p>
-                            </div>
-                            <div class="article-card">
+                            </a>
+                            <a class="article-card" href="assets/Vaultline_Risk_Disclosure_Summary.pdf" target="_blank">
                                 <div class="article-card-header">
                                     <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
                                     <span class="article-card-name">Risk Disclosure</span>
                                     <span class="article-card-link">↗</span>
                                 </div>
                                 <p class="article-card-desc">Important information about trading risks and potential losses.</p>
-                            </div>
-                            <div class="article-card">
+                            </a>
+                            <a class="article-card" href="assets/Vaultline_Strategy_Overview.pdf" target="_blank">
                                 <div class="article-card-header">
                                     <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
                                     <span class="article-card-name">Strategy Overview</span>
                                     <span class="article-card-link">↗</span>
                                 </div>
                                 <p class="article-card-desc">How STRATA's algorithms identify, manage, and execute trades.</p>
-                            </div>
-                            <div class="article-card">
+                            </a>
+                            <a class="article-card" href="assets/Vaultline_Privacy_Policy_Summary.pdf" target="_blank">
                                 <div class="article-card-header">
                                     <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
                                     <span class="article-card-name">Privacy Policy</span>
                                     <span class="article-card-link">↗</span>
                                 </div>
                                 <p class="article-card-desc">How Vaultline collects, uses, and protects your information.</p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="guarantee-block">
@@ -2458,7 +2474,7 @@
                     </div>
                     <div class="vaultline-intro-frame angel-card-frame">
                         <div class="vaultline-intro-frame-inner" style="text-align:center;">
-                            <p class="pillars-intro-paragraph" style="margin:0;">For more questions and support, please contact us at (XXX) XXX-XXXX</p>
+                            <p class="pillars-intro-paragraph" style="margin:0;">For more questions and support, please contact us at +1 602-905-4825</p>
                         </div>
                     </div>
                 </div>
