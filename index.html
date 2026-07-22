@@ -1185,10 +1185,20 @@
             border: none;
         }
 
-        .why-faq-section {
+        .why-faq-inner {
             display: grid;
             grid-template-columns: 1fr 0.8fr;
             align-items: start;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 0.75rem 2rem;
+            gap: 2rem;
+        }
+
+        .why-column {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
         }
 
         .faq-column {
@@ -1573,15 +1583,15 @@
             color: #334155;
         }
 
-        @media (max-width: 1000px) {
-            .why-faq-section {
+        @media (max-width: 860px) {
+            .why-faq-inner {
                 grid-template-columns: 1fr;
             }
 
             .faq-column {
                 border-left: none;
                 border-top: 1px solid rgba(11, 37, 64, 0.08);
-                padding: 2rem 1.5rem;
+                padding: 1.5rem 0;
             }
         }
 
@@ -2049,30 +2059,68 @@
                         </div>
                     </div>
                 </div>
-                <h4 class="vaultline-feature-subtitle">Why?</h4>
-                <div class="vaultline-feature-cards">
-                    <div class="vaultline-feature-card">
-                        <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V19" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M7 18H17" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M4 8L12 6L20 9" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 8V12" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M20 9V13" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M1.5 12C1.5 13.66 2.74 15 4.25 15C5.76 15 7 13.66 7 12" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 13C17.5 14.66 18.59 16 20 16C21.41 16 22.5 14.66 22.5 13" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <span>I was tired of doing everything right and still having no peace of mind about my money.</span>
-                    </div>
-                    <div class="vaultline-feature-card">
-                        <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.9 8.6L22 9.3L16.8 14.1L18.2 21L12 17.3L5.8 21L7.2 14.1L2 9.3L9.1 8.6Z" stroke="#0b2540" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><clipPath id="halfstar1"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2L14.9 8.6L22 9.3L16.8 14.1L18.2 21L12 17.3L5.8 21L7.2 14.1L2 9.3L9.1 8.6Z" fill="#0b2540" stroke="none" clip-path="url(#halfstar1)"/></svg>
-                        <span>I realized investing the old way for retirement meant missing out on life today.</span>
-                    </div>
-                    <div class="vaultline-feature-card">
-                        <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 3L12 6L16 3L20 6C20 14 17 20 12 22C7 20 4 14 4 6Z" fill="#0b2540" stroke="none"/><path d="M7 11L9 9.3L11 11" stroke="#f1f5f7" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 11L15 9.3L17 11" stroke="#f1f5f7" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 14C9 17.5 15 17.5 17 14" stroke="#f1f5f7" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
-                        <span>I was tired of strategies that looked great until conditions changed.</span>
-                    </div>
-                    <div class="vaultline-feature-card">
-                        <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                        <span>I wanted one part of my portfolio that didn't demand my attention every day.</span>
-                    </div>
-                </div>
-                <p class="vaultline-closing-tagline">If you're here, it's likely because parts of this already sound like you — and you're looking for a secure way to grow a portion of your portfolio that isn't tied to what you already own.</p>
             </div>
         </div>
+    <div class="why-faq-inner">
+        <div class="why-column">
+            <h4 class="vaultline-feature-subtitle">Why?</h4>
+            <div class="vaultline-feature-cards">
+                <div class="vaultline-feature-card">
+                    <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V19" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M7 18H17" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M4 8L12 6L20 9" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 8V12" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M20 9V13" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M1.5 12C1.5 13.66 2.74 15 4.25 15C5.76 15 7 13.66 7 12" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 13C17.5 14.66 18.59 16 20 16C21.41 16 22.5 14.66 22.5 13" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>I was tired of doing everything right and still having no peace of mind about my money.</span>
+                </div>
+                <div class="vaultline-feature-card">
+                    <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.9 8.6L22 9.3L16.8 14.1L18.2 21L12 17.3L5.8 21L7.2 14.1L2 9.3L9.1 8.6Z" stroke="#0b2540" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><clipPath id="halfstar1"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2L14.9 8.6L22 9.3L16.8 14.1L18.2 21L12 17.3L5.8 21L7.2 14.1L2 9.3L9.1 8.6Z" fill="#0b2540" stroke="none" clip-path="url(#halfstar1)"/></svg>
+                    <span>I realized investing the old way for retirement meant missing out on life today.</span>
+                </div>
+                <div class="vaultline-feature-card">
+                    <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 3L12 6L16 3L20 6C20 14 17 20 12 22C7 20 4 14 4 6Z" fill="#0b2540" stroke="none"/><path d="M7 11L9 9.3L11 11" stroke="#f1f5f7" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 11L15 9.3L17 11" stroke="#f1f5f7" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 14C9 17.5 15 17.5 17 14" stroke="#f1f5f7" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+                    <span>I was tired of strategies that looked great until conditions changed.</span>
+                </div>
+                <div class="vaultline-feature-card">
+                    <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>I wanted one part of my portfolio that didn't demand my attention every day.</span>
+                </div>
+            </div>
+            <p class="vaultline-closing-tagline">If you're here, it's likely because parts of this already sound like you — and you're looking for a secure way to grow a portion of your portfolio that isn't tied to what you already own.</p>
+        </div>
+        <div class="faq-column" id="section-demo">
+            <h4 class="vaultline-video-subheadline vaultline-faq-subheadline" id="section-faq">FAQ Short Videos</h4>
+            <p class="vaultline-video-tagline" style="margin-bottom:0.75rem;">For Quick Clarity</p>
+            <select class="vaultline-faq-search" id="faqSelect">
+                <option value="" disabled selected>Search or select a question...</option>
+                <optgroup label="Trust &amp; Safety">
+                    <option value="u0oJaiN2ic0">How do I know this isn't a scam?</option>
+                    <option value="VetR-JXAxxA">Who actually holds my money — is it in your account or mine?</option>
+                    <option value="_LMZhV5PEts">Can I take my money out whenever I want?</option>
+                    <option value="O6Zii7Tjk1g">How do I know the results are real and not cherry-picked?</option>
+                </optgroup>
+                <optgroup label="The Product">
+                    <option value="g8pT5GxWPF0">Do I have to sit and watch charts all day or does it run itself?</option>
+                    <option value="n0YDltiafGE">I already have property and stocks — where does this fit in?</option>
+                    <option value="BNLLP359fss">What happens to my money if the market crashes?</option>
+                </optgroup>
+                <optgroup label="Getting Started">
+                    <option value="nEDbK3S7Kgo">How much money do I need to get started?</option>
+                    <option value="EuapQeplINI">What account do I need to open and how does that work?</option>
+                </optgroup>
+                <optgroup label="Performance &amp; Risk">
+                    <option value="Qvr4hb7lhOQ">What kind of returns are people actually seeing?</option>
+                    <option value="vLepn6FwCxQ">What's the worst case scenario — how much could I lose?</option>
+                    <option value="UcIHjbtYI7g">You can't guarantee future returns — so why should I trust the numbers?</option>
+                </optgroup>
+                <optgroup label="The Team">
+                    <option value="fqqnAeQw9tA">Who are the people behind this and why should I trust them?</option>
+                    <option value="7m3Im7eBxTg">How is this any different from just using a financial adviser?</option>
+                </optgroup>
+            </select>
+            <h5 class="vaultline-faq-video-title" id="faqVideoTitle" style="display:none;"></h5>
+            <div class="video-frame" id="faqVideoFrame" style="display:none;">
+                <iframe id="faqIframe" src="" title="FAQ Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:16/9;border:none;display:block;"></iframe>
+            </div>
+        </div>
+    </div>
     </section>
-    <div class="why-faq-section">
     <section class="step2-section" id="section-thesis">
         <div class="step2-inner">
             <div class="step2-row">
@@ -2146,42 +2194,6 @@
             <p class="section-general-disclaimer">This content is for informational purposes only and does not constitute financial or investment advice. Please consult a licensed financial advisor before making investment decisions.</p>
         </div>
     </section>
-    <div class="faq-column" id="section-demo">
-        <h4 class="vaultline-video-subheadline vaultline-faq-subheadline" id="section-faq">FAQ Short Videos</h4>
-        <p class="vaultline-video-tagline" style="margin-bottom:0.75rem;">For Quick Clarity</p>
-        <select class="vaultline-faq-search" id="faqSelect">
-            <option value="" disabled selected>Search or select a question...</option>
-            <optgroup label="Trust &amp; Safety">
-                <option value="u0oJaiN2ic0">How do I know this isn't a scam?</option>
-                <option value="VetR-JXAxxA">Who actually holds my money — is it in your account or mine?</option>
-                <option value="_LMZhV5PEts">Can I take my money out whenever I want?</option>
-                <option value="O6Zii7Tjk1g">How do I know the results are real and not cherry-picked?</option>
-            </optgroup>
-            <optgroup label="The Product">
-                <option value="g8pT5GxWPF0">Do I have to sit and watch charts all day or does it run itself?</option>
-                <option value="n0YDltiafGE">I already have property and stocks — where does this fit in?</option>
-                <option value="BNLLP359fss">What happens to my money if the market crashes?</option>
-            </optgroup>
-            <optgroup label="Getting Started">
-                <option value="nEDbK3S7Kgo">How much money do I need to get started?</option>
-                <option value="EuapQeplINI">What account do I need to open and how does that work?</option>
-            </optgroup>
-            <optgroup label="Performance &amp; Risk">
-                <option value="Qvr4hb7lhOQ">What kind of returns are people actually seeing?</option>
-                <option value="vLepn6FwCxQ">What's the worst case scenario — how much could I lose?</option>
-                <option value="UcIHjbtYI7g">You can't guarantee future returns — so why should I trust the numbers?</option>
-            </optgroup>
-            <optgroup label="The Team">
-                <option value="fqqnAeQw9tA">Who are the people behind this and why should I trust them?</option>
-                <option value="7m3Im7eBxTg">How is this any different from just using a financial adviser?</option>
-            </optgroup>
-        </select>
-        <h5 class="vaultline-faq-video-title" id="faqVideoTitle" style="display:none;"></h5>
-        <div class="video-frame" id="faqVideoFrame" style="display:none;">
-            <iframe id="faqIframe" src="" title="FAQ Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:16/9;border:none;display:block;"></iframe>
-        </div>
-    </div>
-    </div>
     <section class="angel-video-section" id="section-architecture">
         <div class="angel-video-inner">
             <div class="angel-video-grid">
