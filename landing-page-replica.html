@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scale.co — Scaling Workshop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#e01e26;      /* red accent (replaces purple) */
+    --accent-dark:#b3151b;
+    --ink:#0d0d0f;         /* near-black sections */
+    --ink-2:#161619;
+    --paper:#ffffff;
+    --muted:#6b6b70;
+    --line:#e5e5e8;
+    --max:480px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:var(--paper);}
+  body{
+    font-family:'Montserrat',sans-serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .page{width:100%;max-width:var(--max);background:var(--paper);overflow:hidden;}
+  img,.ph{display:block;width:100%;height:auto;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit;}
+
+  /* Placeholder image blocks */
+  .ph{
+    background:repeating-linear-gradient(135deg,#e9e9ec,#e9e9ec 10px,#dedee2 10px,#dedee2 20px);
+    display:flex;align-items:center;justify-content:center;
+    color:#9a9aa0;font-size:0.65rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+    text-align:center;
+  }
+
+  /* ---------- Top announcement bar ---------- */
+  .announce{
+    background:var(--ink);
+    color:#fff;
+    font-size:.62rem;
+    font-weight:600;
+    letter-spacing:.03em;
+    text-align:center;
+    padding:.55rem 1rem;
+    line-height:1.4;
+  }
+  .announce .tag{
+    background:var(--accent);
+    color:#fff;
+    font-size:.55rem;
+    font-weight:800;
+    padding:.15rem .4rem;
+    border-radius:3px;
+    margin-right:.4rem;
+    letter-spacing:.06em;
+  }
+  .announce .arrow{color:var(--accent);font-weight:800;margin-left:.3rem;}
+
+  /* ---------- Header ---------- */
+  header{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    padding:.9rem 1rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:.4rem;
+    font-weight:800;
+    letter-spacing:.02em;
+    font-size:.85rem;
+  }
+  .logo .mark{
+    width:20px;height:20px;
+    background:var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:900;font-size:.7rem;
+    clip-path:polygon(50% 0%,100% 100%,0% 100%);
+  }
+  .menu-btn{
+    position:absolute;right:1rem;top:50%;transform:translateY(-50%);
+    width:24px;height:18px;display:flex;flex-direction:column;justify-content:space-between;
+    background:none;border:none;cursor:pointer;
+  }
+  .menu-btn span{display:block;height:2px;background:var(--ink);border-radius:2px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--ink);
+    color:#fff;
+    padding:2.4rem 1.4rem 2rem;
+    text-align:center;
+  }
+  .hero h1{
+    font-size:1.7rem;
+    font-weight:800;
+    line-height:1.25;
+    text-transform:uppercase;
+    margin-bottom:1rem;
+    letter-spacing:.01em;
+  }
+  .hero p{
+    font-size:.85rem;
+    color:#c9c9cc;
+    line-height:1.6;
+    max-width:340px;
+    margin:0 auto 1.6rem;
+  }
+  .btn{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    font-weight:700;
+    font-size:.72rem;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    padding:1rem 1.8rem;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    width:100%;
+    max-width:300px;
+    transition:background .15s ease;
+  }
+  .btn:hover{background:var(--accent-dark);}
+  .btn-outline{
+    display:block;
+    width:100%;
+    background:transparent;
+    color:var(--accent);
+    border:1.5px solid var(--accent);
+    font-weight:700;
+    font-size:.68rem;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    padding:.7rem 1rem;
+    border-radius:4px;
+    text-align:center;
+    cursor:pointer;
+  }
+  .btn-outline:hover{background:var(--accent);color:#fff;}
+
+  /* ---------- Stats ---------- */
+  .stats{
+    background:var(--ink);
+    color:#fff;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.6rem 1rem;
+    padding:0 1.4rem 2.6rem;
+    text-align:center;
+  }
+  .stats .num{
+    font-size:1.6rem;
+    font-weight:800;
+    color:var(--accent);
+    line-height:1;
+    margin-bottom:.35rem;
+  }
+  .stats .label{
+    font-size:.6rem;
+    font-weight:600;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:#c9c9cc;
+  }
+
+  /* ---------- Roadmap section ---------- */
+  .roadmap{
+    background:var(--ink);
+    padding:0 1.4rem 2.6rem;
+    text-align:center;
+  }
+  .badge-new{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    font-size:.6rem;
+    font-weight:800;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    padding:.3rem .6rem;
+    border-radius:3px;
+    margin-bottom:.9rem;
+  }
+  .roadmap h2{
+    color:#fff;
+    font-size:1.15rem;
+    font-weight:800;
+    margin-bottom:1.2rem;
+  }
+  .roadmap .ph{
+    aspect-ratio:16/10;
+    border-radius:8px;
+    margin-bottom:1.4rem;
+  }
+
+  /* ---------- Free training section ---------- */
+  .training-head{
+    background:var(--ink);
+    padding:1rem 1.4rem 2rem;
+    text-align:center;
+  }
+  .training-head h2{
+    color:#fff;
+    font-size:1.5rem;
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.3;
+  }
+  .training-head h2 span{color:var(--accent);}
+  .training-head p{
+    color:#c9c9cc;
+    font-size:.78rem;
+    margin-top:.8rem;
+    line-height:1.6;
+  }
+
+  .courses{
+    background:#fff;
+    padding:1.6rem 1.2rem 2.4rem;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.2rem;
+  }
+  .course-card{
+    display:flex;
+    flex-direction:column;
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    background:#fff;
+  }
+  .course-card .tag-row{
+    padding:.5rem .6rem 0;
+  }
+  .course-card .tag{
+    display:inline-block;
+    font-size:.52rem;
+    font-weight:800;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    padding:.2rem .4rem;
+    border-radius:3px;
+    color:#fff;
+  }
+  .tag.red{background:var(--accent);}
+  .tag.dark{background:var(--ink);}
+  .course-card .ph{
+    aspect-ratio:1/1;
+    margin:.6rem;
+    width:calc(100% - 1.2rem);
+    border-radius:6px;
+  }
+  .course-card .body{
+    padding:0 .8rem .9rem;
+    display:flex;
+    flex-direction:column;
+    gap:.5rem;
+    flex:1;
+  }
+  .course-card h3{
+    font-size:.72rem;
+    font-weight:800;
+    line-height:1.3;
+  }
+  .course-card .sub{
+    font-size:.62rem;
+    color:var(--muted);
+    font-weight:600;
+  }
+  .course-card .spacer{flex:1;}
+  .course-card .btn-outline{font-size:.58rem;padding:.55rem .5rem;}
+
+  /* ---------- FAQ ---------- */
+  .faq{
+    background:#fff;
+    padding:2.4rem 1.4rem;
+  }
+  .faq h2{
+    text-align:center;
+    font-size:1.4rem;
+    font-weight:800;
+    margin-bottom:1.6rem;
+  }
+  .faq details{
+    border-bottom:1px dotted var(--line);
+    padding:1rem 0;
+  }
+  .faq details:first-of-type{border-top:1px dotted var(--line);}
+  .faq summary{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    cursor:pointer;
+    font-size:.8rem;
+    font-weight:700;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{
+    content:'+';
+    font-size:1.1rem;
+    font-weight:400;
+    color:var(--accent);
+    flex-shrink:0;
+    transition:transform .15s ease;
+  }
+  .faq details[open] summary::after{content:'\2212';}
+  .faq .answer{
+    font-size:.75rem;
+    color:var(--muted);
+    line-height:1.6;
+    margin-top:.8rem;
+  }
+
+  /* ---------- About founders ---------- */
+  .founders{
+    background:var(--ink);
+    color:#fff;
+    padding:2.6rem 1.4rem;
+    text-align:center;
+  }
+  .founders h2{
+    font-size:1.3rem;
+    font-weight:800;
+    letter-spacing:.03em;
+    margin-bottom:1.6rem;
+  }
+  .founders .ph{
+    aspect-ratio:4/3;
+    border-radius:8px;
+    margin-bottom:1.4rem;
+  }
+  .founders p{
+    font-size:.78rem;
+    color:#c9c9cc;
+    line-height:1.7;
+    text-align:left;
+    margin-bottom:1rem;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:#000;
+    color:#c9c9cc;
+    padding:2.4rem 1.4rem 1.6rem;
+    text-align:center;
+  }
+  footer .logo{
+    justify-content:center;
+    color:#fff;
+    margin-bottom:1.8rem;
+    font-size:.85rem;
+  }
+  footer .logo .mark{background:var(--accent);}
+  .foot-cols{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.4rem;
+    text-align:left;
+    margin-bottom:1.8rem;
+  }
+  .foot-cols h4{
+    font-size:.62rem;
+    font-weight:800;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:#fff;
+    margin-bottom:.7rem;
+  }
+  .foot-cols li{
+    font-size:.68rem;
+    margin-bottom:.5rem;
+    color:#9a9aa0;
+  }
+  .foot-legal{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:.4rem .9rem;
+    font-size:.62rem;
+    color:#9a9aa0;
+    border-top:1px solid #232326;
+    padding-top:1.4rem;
+    margin-bottom:1.2rem;
+  }
+  .foot-legal a:hover{color:var(--accent);}
+  footer .disclaimer{
+    font-size:.6rem;
+    color:#6b6b70;
+    line-height:1.7;
+    text-align:left;
+    margin-bottom:1.2rem;
+  }
+  footer .copyright{
+    font-size:.6rem;
+    color:#54545a;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Announcement bar -->
+  <div class="announce">
+    <span class="tag">NEW</span>2026 Scaling Workshop Dates Announced: Find out if you are a fit<span class="arrow">&rarr;</span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <span class="mark">A</span>
+      <span>ACQUISITION.COM</span>
+    </div>
+    <button class="menu-btn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Do You Want<br>To Scale<br>Your Business?</h1>
+    <p>Learn from the team that has scaled a portfolio to over $250M+ in annual revenue.</p>
+    <button class="btn">I'm Ready To Scale</button>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div>
+      <div class="num">10,000</div>
+      <div class="label">Businesses Advised</div>
+    </div>
+    <div>
+      <div class="num">81</div>
+      <div class="label">NPS</div>
+    </div>
+    <div>
+      <div class="num">97.1%</div>
+      <div class="label">Client Retention</div>
+    </div>
+    <div>
+      <div class="num">12,000</div>
+      <div class="label">Workshop Participants</div>
+    </div>
+  </div>
+
+  <!-- Roadmap -->
+  <section class="roadmap">
+    <span class="badge-new">Brand New</span>
+    <h2>$100M Scaling Roadmap</h2>
+    <div class="ph">Roadmap Graphic Placeholder</div>
+    <button class="btn">Get My Custom Scaling Roadmap</button>
+  </section>
+
+  <!-- Free training header -->
+  <div class="training-head">
+    <h2>Free <span>Advanced</span> Training</h2>
+    <p>Videos, eBooks, Templates, Downloads &amp; more to help you succeed:</p>
+  </div>
+
+  <!-- Courses -->
+  <div class="courses">
+    <div class="course-card">
+      <div class="tag-row"><span class="tag red">New Release</span></div>
+      <div class="ph">Book Cover Placeholder</div>
+      <div class="body">
+        <h3>$100M Money Models</h3>
+        <div class="sub">Alex Hormozi &mdash; How To Make Money</div>
+        <div class="spacer"></div>
+        <button class="btn-outline">Take This Course</button>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="tag-row"><span class="tag dark">It's Free</span></div>
+      <div class="ph">Book Cover Placeholder</div>
+      <div class="body">
+        <h3>$100M Offers</h3>
+        <div class="sub">Alex Hormozi &mdash; Offer Creation Course</div>
+        <div class="spacer"></div>
+        <button class="btn-outline">Take This Course</button>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="tag-row"><span class="tag dark">It's Free</span></div>
+      <div class="ph">Book Cover Placeholder</div>
+      <div class="body">
+        <h3>$100M Leads</h3>
+        <div class="sub">Lead Generation Course</div>
+        <div class="spacer"></div>
+        <button class="btn-outline">Take This Course</button>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="tag-row"><span class="tag red">Live In-Person</span></div>
+      <div class="ph">Workshop Photo Placeholder</div>
+      <div class="body">
+        <h3>Scaling Workshop</h3>
+        <div class="sub">Live In-Person Event</div>
+        <div class="spacer"></div>
+        <button class="btn-outline">Attend a Workshop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>FAQs</h2>
+    <details>
+      <summary>What is the Acquisition.com Scaling Workshop?</summary>
+      <div class="answer">A live, in-person event where our team walks you through the exact frameworks used to scale our portfolio of companies past $250M+ in annual revenue.</div>
+    </details>
+    <details>
+      <summary>How to register for a workshop?</summary>
+      <div class="answer">Apply through the button above, complete a short qualification form, and our team will follow up with available dates and locations.</div>
+    </details>
+    <details>
+      <summary>Who is the right fit for a workshop?</summary>
+      <div class="answer">Founders and operators doing at least six figures in annual revenue who are ready to build systems and scale their team.</div>
+    </details>
+    <details>
+      <summary>Who are the main speakers?</summary>
+      <div class="answer">Workshops are led by members of the Acquisition.com team, including guest appearances from Alex and Leila Hormozi.</div>
+    </details>
+  </section>
+
+  <!-- About founders -->
+  <section class="founders">
+    <h2>About Our Founders</h2>
+    <div class="ph">Founder Photo Placeholder</div>
+    <p>Alex and Leila Hormozi are co-founders and managing partners of Acquisition.com. In four years, the portfolio grew to over $250M+ in annual revenue. Before Acquisition.com they founded Gym Launch, Prestige Labs, and ALAN. In 2021, a private equity sponsor purchased Gym Launch and Prestige Labs for $46.2M. And in that same year, a strategic buyer bought ALAN in an all stock deal.</p>
+    <p>Alex and Leila wrote two best selling books, $100M Offers and $100M Leads, which have sold over 1M copies and are still #1 &amp; #2 on Amazon for Marketing &amp; Sales.</p>
+    <p>Their mission is to make real business education accessible to everyone. To do that, they strive to build a business that improves the lives of everyone it comes in contact with. They built a culture of praise over punishment to make it easy for employees to give and receive feedback. Alex and Leila have an audience of over 12M+ who subscribe to their business content across social media.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="logo">
+      <span class="mark">A</span>
+      <span>ACQUISITION.COM</span>
+    </div>
+    <div class="foot-cols">
+      <ul>
+        <h4>Courses</h4>
+        <li>$100M Money Models</li>
+        <li>$100M Offers</li>
+        <li>$100M Leads</li>
+      </ul>
+      <ul>
+        <h4>Media</h4>
+        <li>Podcast</li>
+        <li>YouTube</li>
+        <li>Newsletter</li>
+      </ul>
+      <ul>
+        <h4>About Acq</h4>
+        <li>Our Story</li>
+        <li>Portfolio</li>
+        <li>Careers</li>
+      </ul>
+      <ul>
+        <h4>Explore</h4>
+        <li>Scaling Workshop</li>
+        <li>Free Training</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="foot-legal">
+      <a href="#">Privacy Statement</a>
+      <a href="#">Terms and Conditions</a>
+      <a href="#">DMCA Policy</a>
+      <a href="#">Do Not Sell My Info</a>
+    </div>
+    <p class="disclaimer">Alex and Leila Hormozi results are not typical and are not a guarantee of your success. Alex and Leila are experienced business owners and investors, and your results will vary depending on your experience, effort, education, and background. Acquisition.com is not responsible for individual results. This is not a get rich quick scheme and requires hard work and dedication. We cannot guarantee that any information within this website will make you money or is even likely to make you money. Any examples given of income, revenue, or results are not intended to represent or guarantee that everyone will achieve the same or similar results.</p>
+    <p class="copyright">Copyright &copy; 2026 Acquisition.com LLC. All Rights Reserved.</p>
+  </footer>
+
+</div>
+</body>
+</html>
