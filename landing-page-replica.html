@@ -103,12 +103,13 @@
     inset:0;
     background:#fff;
     z-index:1000;
-    padding:1rem 1.4rem 2rem;
     overflow-y:auto;
     opacity:0;
     visibility:hidden;
     transform:translateY(-12px);
     transition:opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
+    display:flex;
+    justify-content:center;
   }
   .mobile-menu.open{
     opacity:1;
@@ -116,55 +117,68 @@
     transform:translateY(0);
     transition:opacity .25s ease, transform .25s ease;
   }
+  .mobile-menu-inner{
+    width:100%;
+    max-width:var(--max);
+    padding:1.2rem 1.4rem 2rem;
+  }
+  .menu-top-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:2.6rem;
+  }
+  .menu-top-row .logo{font-size:.8rem;}
   .menu-close-bar{
     display:flex;
     align-items:center;
-    gap:.6rem;
+    gap:.5rem;
     width:fit-content;
     background:var(--ink);
     color:#fff;
     border:none;
     border-radius:999px;
-    padding:.7rem 1.2rem;
+    padding:.6rem 1.1rem;
     font-family:inherit;
     font-size:.85rem;
     font-weight:700;
     cursor:pointer;
-    margin-bottom:2.2rem;
+    flex-shrink:0;
   }
-  .menu-close-bar svg{width:14px;height:14px;flex-shrink:0;}
+  .menu-close-bar svg{width:13px;height:13px;flex-shrink:0;}
   .menu-section-label{
-    font-size:.7rem;
+    font-size:.72rem;
     color:var(--muted);
     text-transform:uppercase;
-    letter-spacing:.05em;
+    letter-spacing:.08em;
     font-weight:600;
-    margin-bottom:.9rem;
+    margin-bottom:1.1rem;
   }
   .menu-links{
     display:flex;
     flex-direction:column;
-    gap:1.1rem;
-    margin-bottom:2rem;
+    gap:1.4rem;
+    margin-bottom:2.4rem;
   }
   .menu-links a{
-    font-size:1.55rem;
+    font-size:2.1rem;
     font-weight:800;
+    line-height:1;
     color:var(--ink);
   }
   .menu-divider{
     border:none;
     border-top:1px solid var(--line);
-    margin:0 0 2rem;
+    margin:0 0 2.2rem;
   }
   .legal-links{
     display:flex;
     flex-direction:column;
-    gap:.85rem;
-    margin-bottom:2.2rem;
+    gap:1rem;
+    margin-bottom:2.4rem;
   }
   .legal-links a{
-    font-size:1rem;
+    font-size:1.2rem;
     font-weight:700;
     color:var(--ink);
   }
@@ -173,7 +187,7 @@
     gap:.8rem;
   }
   .social-icons-row a{
-    width:42px;height:42px;
+    width:48px;height:48px;
     border:1.5px solid var(--ink);
     border-radius:10px;
     display:flex;
@@ -181,7 +195,7 @@
     justify-content:center;
     color:var(--ink);
   }
-  .social-icons-row svg{width:19px;height:19px;}
+  .social-icons-row svg{width:21px;height:21px;}
 
   /* ---------- Hero ---------- */
   .hero{
@@ -535,17 +549,24 @@
 
   <!-- Mobile menu overlay -->
   <div class="mobile-menu" id="mobileMenu">
-    <button class="menu-close-bar" id="menuCloseBtn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      Close
-    </button>
+   <div class="mobile-menu-inner">
+    <div class="menu-top-row">
+      <div class="logo">
+        <img class="mark" src="landing-assets/logo-dark.png" alt="GoStack Systems">
+        <span>GoStack Systems</span>
+      </div>
+      <button class="menu-close-bar" id="menuCloseBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        Close
+      </button>
+    </div>
 
     <div class="menu-section-label">Menu</div>
     <div class="menu-links">
       <a href="#founder" class="menu-link">About</a>
-      <a href="#guide" class="menu-link">The G5 Guide</a>
-      <a href="#training" class="menu-link">Free Training</a>
-      <a href="#faq" class="menu-link">FAQs</a>
+      <a href="#" class="menu-link">Pricing</a>
+      <a href="#training" class="menu-link">Resources</a>
+      <a href="#guide" class="menu-link">Our Features</a>
     </div>
 
     <hr class="menu-divider">
@@ -571,6 +592,7 @@
         <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9l6 3-6 3V9Z"/></svg>
       </a>
     </div>
+   </div>
   </div>
 
   <!-- Hero -->
