@@ -95,6 +95,94 @@
   }
   .menu-btn span{display:block;height:2px;background:var(--ink);border-radius:2px;}
 
+  /* ---------- Mobile menu overlay ---------- */
+  html{scroll-behavior:smooth;}
+  body.menu-open{overflow:hidden;}
+  .mobile-menu{
+    position:fixed;
+    inset:0;
+    background:#fff;
+    z-index:1000;
+    padding:1rem 1.4rem 2rem;
+    overflow-y:auto;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-12px);
+    transition:opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
+  }
+  .mobile-menu.open{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+    transition:opacity .25s ease, transform .25s ease;
+  }
+  .menu-close-bar{
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+    width:fit-content;
+    background:var(--ink);
+    color:#fff;
+    border:none;
+    border-radius:999px;
+    padding:.7rem 1.2rem;
+    font-family:inherit;
+    font-size:.85rem;
+    font-weight:700;
+    cursor:pointer;
+    margin-bottom:2.2rem;
+  }
+  .menu-close-bar svg{width:14px;height:14px;flex-shrink:0;}
+  .menu-section-label{
+    font-size:.7rem;
+    color:var(--muted);
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    font-weight:600;
+    margin-bottom:.9rem;
+  }
+  .menu-links{
+    display:flex;
+    flex-direction:column;
+    gap:1.1rem;
+    margin-bottom:2rem;
+  }
+  .menu-links a{
+    font-size:1.55rem;
+    font-weight:800;
+    color:var(--ink);
+  }
+  .menu-divider{
+    border:none;
+    border-top:1px solid var(--line);
+    margin:0 0 2rem;
+  }
+  .legal-links{
+    display:flex;
+    flex-direction:column;
+    gap:.85rem;
+    margin-bottom:2.2rem;
+  }
+  .legal-links a{
+    font-size:1rem;
+    font-weight:700;
+    color:var(--ink);
+  }
+  .social-icons-row{
+    display:flex;
+    gap:.8rem;
+  }
+  .social-icons-row a{
+    width:42px;height:42px;
+    border:1.5px solid var(--ink);
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--ink);
+  }
+  .social-icons-row svg{width:19px;height:19px;}
+
   /* ---------- Hero ---------- */
   .hero{
     background:#fff;
@@ -440,10 +528,50 @@
       <img class="mark" src="landing-assets/logo-dark.png" alt="GoStack Systems">
       <span>GoStack Systems</span>
     </div>
-    <button class="menu-btn" aria-label="Open menu">
+    <button class="menu-btn" id="menuOpenBtn" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="menu-close-bar" id="menuCloseBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      Close
+    </button>
+
+    <div class="menu-section-label">Menu</div>
+    <div class="menu-links">
+      <a href="#founder" class="menu-link">About</a>
+      <a href="#guide" class="menu-link">The G5 Guide</a>
+      <a href="#training" class="menu-link">Free Training</a>
+      <a href="#faq" class="menu-link">FAQs</a>
+    </div>
+
+    <hr class="menu-divider">
+
+    <div class="menu-section-label">Legal</div>
+    <div class="legal-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+    </div>
+
+    <div class="menu-section-label">Social Media</div>
+    <div class="social-icons-row">
+      <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      </a>
+      <a href="#" aria-label="X">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.53 3H21l-7.4 8.46L22 21h-6.9l-5.4-6.6L3.4 21H0l7.9-9.03L1.5 3h7.06l4.87 5.94L17.53 3Zm-1.2 16.2h1.9L7.77 4.7H5.73l10.6 14.5Z"/></svg>
+      </a>
+      <a href="#" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.5 2h2.9c.2 1.6 1.1 3 2.6 3.9V9c-1.5.1-2.9-.3-4.1-1.1v6.7a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v3a2.8 2.8 0 1 0 2 2.7V2Z"/></svg>
+      </a>
+      <a href="#" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9l6 3-6 3V9Z"/></svg>
+      </a>
+    </div>
+  </div>
 
   <!-- Hero -->
   <section class="hero">
@@ -474,7 +602,7 @@
   </div>
 
   <!-- Roadmap -->
-  <section class="roadmap">
+  <section class="roadmap" id="guide">
     <span class="badge-new">Brand New</span>
     <h2>The G5 Marketing &amp; Operations Framework Guide</h2>
     <div class="ph">Roadmap Graphic Placeholder</div>
@@ -482,7 +610,7 @@
   </section>
 
   <!-- Free training header -->
-  <div class="training-head">
+  <div class="training-head" id="training">
     <h2>Free <span>Advanced</span> Training</h2>
     <p>Videos, eBooks, Templates, Downloads &amp; more to help you succeed:</p>
   </div>
@@ -535,7 +663,7 @@
   </div>
 
   <!-- FAQ -->
-  <section class="faq">
+  <section class="faq" id="faq">
     <h2>FAQs</h2>
     <details>
       <summary>What is the GoStack Systems Scaling Workshop?</summary>
@@ -556,7 +684,7 @@
   </section>
 
   <!-- About founder -->
-  <section class="founders">
+  <section class="founders" id="founder">
     <h2>About Our Founder</h2>
     <img class="founder-photo" src="landing-assets/founder-portrait-2.png" alt="Angel John Renteria">
     <p>I started a software company from the ground up with a few partners &mdash; and went through hell figuring out marketing. Cheap freelancers. Expensive agencies that overpromised and underdelivered. None of it moved the needle.</p>
@@ -607,5 +735,25 @@
   </footer>
 
 </div>
+<script>
+  var menu = document.getElementById('mobileMenu');
+  var openBtn = document.getElementById('menuOpenBtn');
+  var closeBtn = document.getElementById('menuCloseBtn');
+
+  function openMenu(){
+    menu.classList.add('open');
+    document.body.classList.add('menu-open');
+  }
+  function closeMenu(){
+    menu.classList.remove('open');
+    document.body.classList.remove('menu-open');
+  }
+
+  openBtn.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  document.querySelectorAll('.menu-link').forEach(function(link){
+    link.addEventListener('click', closeMenu);
+  });
+</script>
 </body>
 </html>
