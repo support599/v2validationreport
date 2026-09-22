@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duty of Care</title>
+    <title>Why We Built Vaultline</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -1955,6 +1955,24 @@
             color: rgba(255,255,255,0.3);
             text-align: center;
         }
+
+        .teaser-section{width:100%;padding:2.5rem 0;}
+        .teaser-section.alt{background:#f1f5f7;}
+        .teaser-inner{max-width:700px;margin:0 auto;padding:0 0.75rem;text-align:center;}
+        .teaser-inner h2{margin:0 0 0.75rem 0;font-size:1.4rem;font-weight:400;color:#0b2540;}
+        .teaser-inner p{margin:0 0 1.25rem 0;font-size:0.95rem;line-height:1.6;color:#475569;}
+        .teaser-learn-btn{display:inline-flex;align-items:center;gap:0.4rem;background:#0b2540;color:#ffffff;font-size:0.85rem;font-weight:700;text-decoration:none;padding:0.85rem 1.75rem;}
+        .teaser-learn-btn:hover{background:#0f1720;}
+
+        .subpage-hero{width:100%;background:#f1f5f7;padding:2.5rem 0.75rem;text-align:center;}
+        .subpage-hero-inner{max-width:800px;margin:0 auto;}
+        .subpage-hero h1{font-size:2rem;font-weight:400;color:#2b2b2b;margin-bottom:0.75rem;line-height:1.25;}
+        .subpage-hero p{font-size:1.05rem;color:#475569;max-width:600px;margin:0 auto;}
+        .subpage-back-link{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:600;color:#0b2540;text-decoration:none;margin-bottom:1.25rem;}
+
+        @media (max-width:768px){
+            .subpage-hero h1{font-size:1.6rem;}
+        }
     </style>
 </head>
 <body>
@@ -1979,15 +1997,15 @@
 
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-list">
-            <a class="mobile-menu-item" href="why-vaultline.html#section-cofounder" data-menu-item>
+            <a class="mobile-menu-item" href="#section-cofounder" data-menu-item>
                 <span class="mobile-menu-num">01</span>
                 <span class="mobile-menu-label">Meet Co-Founder</span>
             </a>
-            <a class="mobile-menu-item" href="why-vaultline.html#section-demo" data-menu-item>
+            <a class="mobile-menu-item" href="#section-demo" data-menu-item>
                 <span class="mobile-menu-num">02</span>
                 <span class="mobile-menu-label">Demo Expectations</span>
             </a>
-            <a class="mobile-menu-item" href="why-vaultline.html#section-faq" data-menu-item>
+            <a class="mobile-menu-item" href="#section-faq" data-menu-item>
                 <span class="mobile-menu-num">03</span>
                 <span class="mobile-menu-label">FAQs</span>
             </a>
@@ -1995,576 +2013,108 @@
                 <span class="mobile-menu-num">04</span>
                 <span class="mobile-menu-label">Investment Thesis</span>
             </a>
-            <a class="mobile-menu-item" href="#section-architecture" data-menu-item>
+            <a class="mobile-menu-item" href="index.html#section-architecture" data-menu-item>
                 <span class="mobile-menu-num">05</span>
                 <span class="mobile-menu-label">Architecture Presentation</span>
             </a>
-            <a class="mobile-menu-item" href="#section-resources" data-menu-item>
+            <a class="mobile-menu-item" href="index.html#section-resources" data-menu-item>
                 <span class="mobile-menu-num">06</span>
                 <span class="mobile-menu-label">Resources &amp; Performance</span>
             </a>
-            <a class="mobile-menu-item" href="#section-start" data-menu-item>
+            <a class="mobile-menu-item" href="index.html#section-start" data-menu-item>
                 <span class="mobile-menu-num">07</span>
                 <span class="mobile-menu-label">How To Start</span>
             </a>
         </div>
     </div>
 
+    <div class="subpage-hero">
+        <div class="subpage-hero-inner">
+            <a class="subpage-back-link" href="index.html">&larr; Back to Home</a>
+            <h1>Why We Built Vaultline</h1>
+            <p>Meet our co-founder, the story behind the system, and answers to the questions investors ask us most.</p>
+        </div>
+    </div>
 
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-inner">
-            <!-- Hero Headline -->
-            <div class="hero-headline">
-                <div class="eyebrow"><span class="eyebrow-text">This document is intended for prospective clients conducting independent due diligence prior to a scheduled consultation.</span></div>
-                <h1>We Built Vaultline to Deliver Superior Risk-Adjusted Returns for Serious Investors</h1>
-            </div>
-
-            <!-- Two Column Content -->
-            <div class="hero-content">
-                <div class="hero-image-col">
-                    <div class="eyebrow hero-image-eyebrow"><span class="eyebrow-text">Independently Verified by Third Party <span class="myfxbook">MY<span class="fx">FX</span>BOOK</span></span></div>
-                    <div class="hero-image">
-                        <img src="assets/proof.png" alt="Proof image" onerror="this.onerror=null;this.src='assets/herobanner.png';">
-                    </div>
-                    <p style="font-size:0.7rem;color:#94a3b8;text-align:center;margin-top:0.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">Last updated June, 2026</p>
-                </div>
-                <div class="hero-text">
-                    <div class="hero-goodbye-frame">
-                    <h2 class="hero-goodbye-headline"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>You've already built the wealth.<br>Now say goodbye to:</h2>
-                    <div class="hero-goodbye-list">
-                        <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L19 6.5V11.5C19 16 16 19.5 12 21C8 19.5 5 16 5 11.5V6.5L12 3Z" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="4" y1="20" x2="20" y2="4" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></span><span>Inflation quietly eating what you worked so hard for</span></div>
-                        <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8.5" stroke="#0b2540" stroke-width="2" fill="none"/><path d="M12 7.5V12L15 14" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="4" y1="20" x2="20" y2="4" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></span><span>The time and stress of figuring out what to invest in and when</span></div>
-                        <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 8L9.5 13.5L13 10L20 17" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 17H20V11.5" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="4" y1="20" x2="20" y2="4" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></span><span>Returns that move with the market — and crash with it</span></div>
-                        <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="11" width="14" height="9" rx="1" stroke="#0b2540" stroke-width="2" fill="none"/><path d="M8 11V8C8 5.791 9.791 4 12 4C14.209 4 16 5.791 16 8V11" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round"/><line x1="4" y1="20" x2="20" y2="4" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></span><span>Watching institutional investors win with tools you couldn't access</span></div>
-                        <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 3H18" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M6 21H18" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M7 3C7 7 9.5 9 12 11C14.5 9 17 7 17 3" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 21C7 17 9.5 15 12 13C14.5 15 17 17 17 21" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="4" y1="20" x2="20" y2="4" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="4" y1="4" x2="20" y2="20" stroke="#dc2626" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></span><span>Waiting on slow returns when a portion of your portfolio could be working harder</span></div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="teaser-section" id="section-cofounder">
-        <div class="teaser-inner">
-            <h2>Why We Built Vaultline</h2>
-            <p>Our co-founder Angel John Renteria spent over 11 years trading before building Vaultline &mdash; giving experienced investors hands-off, risk-adjusted returns without the daily stress of managing capital themselves. Meet the team, see demo expectations, and get answers to the questions investors ask most.</p>
-            <a class="teaser-learn-btn" href="why-vaultline.html">Learn More About Vaultline &rarr;</a>
-        </div>
-    </section>
-    <section class="teaser-section alt" id="section-thesis">
-        <div class="teaser-inner">
-            <h2>Why Algorithmic Trading?</h2>
-            <p>Systematic trading strategies have become a core allocation for many institutional portfolios because they offer a return stream that can complement traditional equity and fixed income investments. See how Strata's live, verified performance compares to traditional assets.</p>
-            <a class="teaser-learn-btn" href="the-system.html">See How The System Works &rarr;</a>
-        </div>
-    </section>
-    <section class="angel-video-section" id="section-architecture">
-        <div class="angel-video-inner">
-            <div class="angel-video-grid">
-                <div class="angel-video-text">
-                    <h2 class="angel-video-subheadline">Watch Angel Explain How It Works</h2>
-                    <div class="video-agenda-grid">
-                        <div class="video-agenda-card"><span class="video-agenda-number">01</span><span class="video-agenda-title">Performance Overview</span></div>
-                        <div class="video-agenda-card"><span class="video-agenda-number">02</span><span class="video-agenda-title">Investment Thesis</span></div>
-                        <div class="video-agenda-card"><span class="video-agenda-number">03</span><span class="video-agenda-title">Strategy Architecture</span></div>
-                        <div class="video-agenda-card"><span class="video-agenda-number">04</span><span class="video-agenda-title">Risk Management</span></div>
-                        <div class="video-agenda-card"><span class="video-agenda-number">05</span><span class="video-agenda-title">Investor Eligibility</span></div>
-                        <div class="video-agenda-card"><span class="video-agenda-number">06</span><span class="video-agenda-title">Getting Started</span></div>
-                    </div>
-                    <div class="video-frame">
-                        <div class="video-wrap" data-video-id="SoMNR9LA-4A">
-                            <img src="https://img.youtube.com/vi/SoMNR9LA-4A/maxresdefault.jpg" alt="Vaultline Trading Systems Introduction" class="video-facade-thumb">
-                            <div class="video-facade-play">
-                                <div class="play-btn-group">
-                                    <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg" class="yt-play-icon"><rect width="68" height="48" rx="10" fill="#FF0000"/><polygon points="27,12 27,36 47,24" fill="white"/></svg>
-                                    <span class="play-label">Play Now</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="angel-video-media">
-                    <div class="vaultline-intro-frame angel-card-frame">
-                        <div class="vaultline-intro-frame-inner">
-                            <h2 class="hero-goodbye-headline"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>Risk-Adjusted Automation, For Security and Consistency.</h2>
-                            <div class="hero-goodbye-list">
-                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Dynamic exposure management based on predefined risk parameters</span></div>
-                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Systematic execution eliminates discretionary decision-making</span></div>
-                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Non-custodial account structure designed to keep investors in control of their capital</span></div>
-                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Third-party performance verification for transparency and accountability</span></div>
-                                <div class="hero-goodbye-item"><span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Adaptive strategy framework designed for changing market environments</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="resources-section" id="section-resources">
-        <div class="resources-inner">
-            <h2 class="resources-title"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>Resources</h2>
-            <div class="resources-columns">
-                <div class="resources-column-left">
-                    <h3 class="resource-block-title track-title-with-logo">Live Verified Track Record <img src="assets/myfxbook_logo.png" alt="myfxbook" class="track-title-logo"></h3>
-                    <div class="track-record-widget">
-                        <div class="track-stats">
-                            <div class="track-stat"><span class="track-stat-label">Gain</span><span class="track-stat-value track-positive" id="trackGain">—</span></div>
-                            <div class="track-stat"><span class="track-stat-label">Abs. Gain</span><span class="track-stat-value track-positive" id="trackAbsGain">—</span></div>
-                            <div class="track-stat"><span class="track-stat-label">Daily</span><span class="track-stat-value" id="trackDaily">—</span></div>
-                            <div class="track-stat"><span class="track-stat-label">Monthly</span><span class="track-stat-value" id="trackMonthly">—</span></div>
-                            <div class="track-stat"><span class="track-stat-label">Drawdown</span><span class="track-stat-value" id="trackDrawdown">—</span></div>
-                        </div>
-                        <div class="track-chart-block">
-                            <h4 class="track-chart-title">Performance</h4>
-                            <div class="track-chart-wrap"><canvas id="trackPerfChart"></canvas></div>
-                        </div>
-                        <div class="track-chart-block">
-                            <div class="track-bar-header">
-                                <h4 class="track-chart-title" id="trackBarTitle">Monthly Gain</h4>
-                                <div class="track-bar-tabs">
-                                    <button class="track-bar-tab" data-bar-year="2025">2025</button>
-                                    <button class="track-bar-tab active" data-bar-year="2026">2026</button>
-                                </div>
-                            </div>
-                            <div class="track-chart-wrap"><canvas id="trackBarChart"></canvas></div>
-                        </div>
-                    </div>
-                    <p style="font-size:0.7rem;color:#94a3b8;margin:0.4rem 0 0.75rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">Last updated June, 2026</p>
-                    <a class="track-verify-btn" href="https://www.myfxbook.com/members/Vaultline/vaultline-strata/11957314" target="_blank">View Verified Data <span class="track-verify-arrow">→</span></a>
-                    <h3 class="resource-block-title testimonial-title">Client Testimonials</h3>
-                    <div class="testimonial-carousel">
-                        <div class="testimonial-nav-card">
-                            <button class="testimonial-arrow" id="testimonialPrev" aria-label="Previous testimonial">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 5L8 12L15 19" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </button>
-                            <span class="testimonial-name" id="testimonialName">Amanda</span>
-                            <button class="testimonial-arrow" id="testimonialNext" aria-label="Next testimonial">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5L16 12L9 19" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </button>
-                        </div>
-                        <div class="video-frame">
-                            <div class="video-wrap" id="testimonialVideoWrap" data-video-id="QGK_cGc0oOw">
-                                <img id="testimonialThumb" src="https://img.youtube.com/vi/QGK_cGc0oOw/hqdefault.jpg" alt="Amanda testimonial" class="video-facade-thumb">
-                                <div class="video-facade-play">
-                                    <div class="play-btn-group">
-                                        <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg" class="yt-play-icon"><rect width="68" height="48" rx="10" fill="#FF0000"/><polygon points="27,12 27,36 47,24" fill="white"/></svg>
-                                        <span class="play-label">Play Now</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="resources-column-right">
-                    <div class="resource-block">
-                        <h3 class="resource-block-title">Client Reviews &amp; Ratings</h3>
-                        <p class="resource-block-sub">See what clients are saying about their experience with Vaultline Trading Systems.</p>
-                        <div class="review-cards">
-                            <div class="review-card">
-                                <div class="review-card-header">
-                                    <svg class="review-card-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/></svg>
-                                    <div>
-                                        <div class="review-card-name">Google Reviews</div>
-                                        <div class="review-card-meta">✓ Verified business profile · Jan 2025</div>
-                                    </div>
-                                </div>
-                                <div class="review-card-rating">5.0 <span class="review-stars">★★★★★</span></div>
-                                <a class="review-card-btn" href="https://share.google/Xx9s5DWVu42ILr28S" target="_blank">Read on Google ↗</a>
-                            </div>
-                            <div class="review-card">
-                                <div class="review-card-header">
-                                    <svg class="review-card-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="#00b67a"/><path d="M12 5.5L14.1 10.5H19.5L15.2 13.6L17 18.5L12 15.3L7 18.5L8.8 13.6L4.5 10.5H9.9Z" fill="#ffffff"/></svg>
-                                    <div>
-                                        <div class="review-card-name">Trustpilot</div>
-                                        <div class="review-card-meta">✓ Claimed profile · June 2025</div>
-                                    </div>
-                                </div>
-                                <div class="review-card-rating">4.2 <span class="review-stars">★★★★<span class="review-star-half">★</span></span></div>
-                                <a class="review-card-btn" href="https://www.trustpilot.com/review/vaultline.co" target="_blank">Read on Trustpilot ↗</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resource-block">
-                        <h3 class="resource-block-title">Published Articles</h3>
-                        <div class="article-cards">
-                            <a class="article-card" href="https://apnews.com/press-release/marketersmedia/vaultline-launches-strata-a-precision-algorithmic-tradingsystem-for-retail-forex-traders-9a6b9da891d7dfbff365c507db9c73aa" target="_blank">
-                                <div class="article-card-header">
-                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#fff" stroke="rgba(11,37,64,0.15)"/><text x="16" y="21" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#dc2626" text-anchor="middle">AP</text></svg>
-                                    <span class="article-card-name">AP News</span>
-                                    <span class="article-card-link">↗</span>
-                                </div>
-                                <p class="article-card-desc">Vaultline Launches Strata: A Precision Algorithmic Trading System for Retail...</p>
-                            </a>
-                            <a class="article-card" href="https://www.barchart.com/story/news/33214551/vaultline-launches-strata-a-precision-algorithmic-trading-system-for-retail-forex-traders" target="_blank">
-                                <div class="article-card-header">
-                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#f59e0b"/><text x="16" y="21" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">b</text></svg>
-                                    <span class="article-card-name">Barchart</span>
-                                    <span class="article-card-link">↗</span>
-                                </div>
-                                <p class="article-card-desc">Vaultline Launches Strata: A Precision Algorithmic Trading System for Retail...</p>
-                            </a>
-                            <a class="article-card" href="https://www.streetinsider.com/The+Financial+Capital/Vaultline+Launches+Strata%3A+A+Precision+Algorithmic+Trading+System+for+Retail+Forex+Traders/25018756.html" target="_blank">
-                                <div class="article-card-header">
-                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><text x="16" y="20" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">SI</text></svg>
-                                    <span class="article-card-name">Street Insider</span>
-                                    <span class="article-card-link">↗</span>
-                                </div>
-                                <p class="article-card-desc">Vaultline Launches Strata: A Precision Algorithmic Trading System for Retail...</p>
-                            </a>
-                            <a class="article-card" href="https://bestofbestreview.com/awards/vaultline-best-algorithmic-trading-software-for-retail-traders-in-portland-of-2025" target="_blank">
-                                <div class="article-card-header">
-                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#fef3c7"/><path d="M16 8L18 13H23L19 16.5L20.5 22L16 18.5L11.5 22L13 16.5L9 13H14Z" fill="#d97706"/></svg>
-                                    <span class="article-card-name">Best of Best Review</span>
-                                    <span class="article-card-link">↗</span>
-                                </div>
-                                <p class="article-card-desc">Best Algorithmic Trading Software for Retail Traders in Portland — 2026</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="resource-block">
-                        <h3 class="resource-block-title">Legal Documents</h3>
-                        <div class="article-cards">
-                            <a class="article-card" href="assets/Vaultline_Agreement_Overview.pdf" target="_blank">
-                                <div class="article-card-header">
-                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
-                                    <span class="article-card-name">License Agreement Summary</span>
-                                    <span class="article-card-link">↗</span>
-                                </div>
-                                <p class="article-card-desc">A clear overview of your licensing terms and responsibilities.</p>
-                            </a>
-                            <a class="article-card" href="assets/Vaultline_Risk_Disclosure_Summary.pdf" target="_blank">
-                                <div class="article-card-header">
-                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
-                                    <span class="article-card-name">Risk Disclosure</span>
-                                    <span class="article-card-link">↗</span>
-                                </div>
-                                <p class="article-card-desc">Important information about trading risks and potential losses.</p>
-                            </a>
-                            <a class="article-card" href="assets/Vaultline_Strategy_Overview.pdf" target="_blank">
-                                <div class="article-card-header">
-                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
-                                    <span class="article-card-name">Strategy Overview</span>
-                                    <span class="article-card-link">↗</span>
-                                </div>
-                                <p class="article-card-desc">How STRATA's algorithms identify, manage, and execute trades.</p>
-                            </a>
-                            <a class="article-card" href="assets/Vaultline_Privacy_Policy_Summary.pdf" target="_blank">
-                                <div class="article-card-header">
-                                    <svg class="article-card-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" fill="#0b2540"/><path d="M11 8H18L21 11V24H11Z" fill="none" stroke="#ffffff" stroke-width="1.2"/><path d="M18 8V11H21" fill="none" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="15" x2="19" y2="15" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="18" x2="19" y2="18" stroke="#ffffff" stroke-width="1.2"/><line x1="13" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.2"/></svg>
-                                    <span class="article-card-name">Privacy Policy</span>
-                                    <span class="article-card-link">↗</span>
-                                </div>
-                                <p class="article-card-desc">How Vaultline collects, uses, and protects your information.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="guarantee-block">
-                        <div class="guarantee-logo-row">
-                            <img src="assets/logoicon.png" alt="Vaultline" class="guarantee-logo-icon">
-                            <img src="assets/logoname.png" alt="Vaultline" class="guarantee-logo-name">
-                        </div>
-                        <h3 class="guarantee-headline">When You Join Vaultline, You Become A Partner; Not A Client.</h3>
-                        <p class="guarantee-tagline">60-Day Money Back Guarantee<span class="asterisk">*</span></p>
-                        <p class="guarantee-subtagline">See details below</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="pillars-section" id="section-start">
-        <div class="pillars-inner">
-            <div class="step2-row pillars-heading-row">
-                <h2 class="step2-headline"><svg class="vaultline-chess-icon vaultline-headline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 21H19L18 18H6L5 21Z" fill="#0b2540"/><path d="M6.5 18L7.5 11H16.5L17.5 18Z" fill="#0b2540"/><path d="M6 11L6.7 5.8L9.5 9.2L12 4.8L14.5 9.2L17.3 5.8L18 11Z" fill="#0b2540"/><circle cx="6.7" cy="5" r="1.3" fill="#0b2540"/><circle cx="12" cy="3.8" r="1.3" fill="#0b2540"/><circle cx="17.3" cy="5" r="1.3" fill="#0b2540"/></svg>What's Next For You?</h2>
-            </div>
-            <div class="pillars-columns">
-                <div class="pillars-column">
-                    <div class="vaultline-intro-frame angel-card-frame">
+    <section class="vaultline-info" id="section-cofounder">
+        <div class="vaultline-grid">
+            <div class="vaultline-copy">
+                <div class="vaultline-intro-frame">
                     <div class="vaultline-intro-frame-inner">
-                    <div class="guarantee-logo-row" style="margin-bottom:1.25rem;">
-                        <img src="assets/logoicon.png" alt="Vaultline" class="guarantee-logo-icon">
-                        <img src="assets/logoname.png" alt="Vaultline" class="guarantee-logo-name">
-                    </div>
-                    <p class="pillars-intro-paragraph">Vaultline is a private fintech software company providing automated algorithmic trading systems for forex, indices, and metals. Users retain full account control with transparent execution through regulated brokers.</p>
-                    <div class="hero-goodbye-list">
-                        <div class="hero-goodbye-item pillar-item">
-                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span class="pillar-item-title">Strategy Software Provider</span>
-                        </div>
-                        <div class="hero-goodbye-item pillar-item">
-                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span class="pillar-item-title">Multiple Algorithms, Multiple Strategies</span>
-                        </div>
-                        <div class="hero-goodbye-item pillar-item">
-                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span class="pillar-item-title">Licensing Fee — No Performance Fees</span>
-                        </div>
-                        <div class="hero-goodbye-item pillar-item">
-                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span class="pillar-item-title">Verified by Independent Automated Trading Auditor</span>
-                        </div>
-                        <div class="hero-goodbye-item pillar-item">
-                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span class="pillar-item-title">Real Strategies — No Re-packaged Bots</span>
-                        </div>
-                        <div class="hero-goodbye-item pillar-item">
-                            <span class="hero-goodbye-arrow"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 12.5L9 17.5L20 6.5" stroke="#16a34a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                            <span class="pillar-item-title">Data-driven Risk Management</span>
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="pillars-column">
-                    <h3 class="pillars-title">Our Process After Joining Is Simple</h3>
-                    <div class="process-steps">
-                        <div class="process-step">
-                            <div class="process-step-number">01</div>
-                            <div class="process-step-content">
-                                <h4 class="process-step-title">Your License Is Activated</h4>
-                                <p class="process-step-desc">Your agreement is finalized, access is confirmed, and your onboarding call is scheduled.</p>
+                        <div class="vaultline-intro-row">
+                            <div class="vaultline-intro-image">
+                                <img src="assets/founder.jpg" alt="Co-Founder & Chief Technology Officer">
                             </div>
-                        </div>
-                        <div class="process-step-arrow">↓</div>
-                        <div class="process-step">
-                            <div class="process-step-number">02</div>
-                            <div class="process-step-content">
-                                <h4 class="process-step-title">Set Up Your Brokerage &amp; Trading Account</h4>
-                                <p class="process-step-desc">We guide you through opening and funding your account. Your capital remains under your name and control.</p>
+                            <div class="vaultline-intro-title-block">
+                                <svg class="vaultline-linkedin-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#6b7280"/><g transform="translate(-1.3,0)"><circle cx="7.5" cy="7.5" r="1.6" fill="#ffffff"/><rect x="6.2" y="10.5" width="2.6" height="8" fill="#ffffff"/><path d="M11.5 10.5H14V12C14.6 11 15.6 10.3 17 10.3C19.5 10.3 20.5 12 20.5 14.5V18.5H17.8V15C17.8 13.8 17.3 13 16.2 13C15.3 13 14.8 13.6 14.6 14.2C14.5 14.4 14.5 14.7 14.5 15V18.5H11.8C11.8 18.5 11.85 11.3 11.5 10.5Z" fill="#ffffff"/></g></svg>
+                                <h3 class="vaultline-intro-title">Meet Our Co-Founder & Chief Technology Officer</h3>
                             </div>
-                        </div>
-                        <div class="process-step-arrow">↓</div>
-                        <div class="process-step">
-                            <div class="process-step-number">03</div>
-                            <div class="process-step-content">
-                                <h4 class="process-step-title">Connect Our System — Execution Only</h4>
-                                <p class="process-step-desc">Your algorithmic trading system is configured, connected to your brokerage account, and tested before deployment.</p>
-                            </div>
-                        </div>
-                        <div class="process-step-arrow">↓</div>
-                        <div class="process-step">
-                            <div class="process-step-number">04</div>
-                            <div class="process-step-content">
-                                <h4 class="process-step-title">Live Trading Begins &amp; Ongoing Support</h4>
-                                <p class="process-step-desc">Once verified, the systems begin trading and you can monitor activity directly through your broker.</p>
-                            </div>
+                            <p class="vaultline-intro-paragraph">Hi, I am Angel John Renteria<br><br>With over 11 years of market experience, my team and I built Vaultline to help experienced investors like you reduce frustration and build real confidence in your capital — with truly hands-off and consistent risk-adjusted returns.</p>
                         </div>
                     </div>
-                    <div class="vaultline-intro-frame angel-card-frame">
-                        <div class="vaultline-intro-frame-inner" style="text-align:center;">
-                            <p class="pillars-intro-paragraph" style="margin:0;">For more questions and support, please contact us at +1 602-905-4825</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mbg-standalone">
-                <div class="guarantee-logo-row" style="margin-bottom:1rem;">
-                    <img src="assets/logoicon.png" alt="Vaultline" class="guarantee-logo-icon">
-                    <img src="assets/logoname.png" alt="Vaultline" class="guarantee-logo-name">
-                </div>
-                <h3 class="pillars-title" style="text-align:center;">60-Day Money Back Guarantee</h3>
-                <p class="pillars-intro-paragraph" style="text-align:center;">Join with confidence. We will honor any refund if the criteria below is met —</p>
-                <div class="mbg-criteria-list">
-                    <span class="guarantee-tagline">Onboard Within 30 Days of Joining</span>
-                    <span class="guarantee-tagline">Use the Software for 60 Days</span>
-                    <span class="guarantee-tagline">No Net Profit Was Generated By Day 60</span>
                 </div>
             </div>
         </div>
+    <div class="why-faq-inner">
+        <div class="why-column">
+            <h4 class="vaultline-feature-subtitle">Why?</h4>
+            <div class="vaultline-feature-cards">
+                <div class="vaultline-feature-card">
+                    <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4V19" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M7 18H17" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M4 8L12 6L20 9" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 8V12" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M20 9V13" stroke="#0b2540" stroke-width="2" stroke-linecap="round"/><path d="M1.5 12C1.5 13.66 2.74 15 4.25 15C5.76 15 7 13.66 7 12" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 13C17.5 14.66 18.59 16 20 16C21.41 16 22.5 14.66 22.5 13" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>I was tired of doing everything right and still having no peace of mind about my money.</span>
+                </div>
+                <div class="vaultline-feature-card">
+                    <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.9 8.6L22 9.3L16.8 14.1L18.2 21L12 17.3L5.8 21L7.2 14.1L2 9.3L9.1 8.6Z" stroke="#0b2540" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><clipPath id="halfstar1"><rect x="0" y="0" width="12" height="24"/></clipPath><path d="M12 2L14.9 8.6L22 9.3L16.8 14.1L18.2 21L12 17.3L5.8 21L7.2 14.1L2 9.3L9.1 8.6Z" fill="#0b2540" stroke="none" clip-path="url(#halfstar1)"/></svg>
+                    <span>I realized investing the old way for retirement meant missing out on life today.</span>
+                </div>
+                <div class="vaultline-feature-card">
+                    <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 3L12 6L16 3L20 6C20 14 17 20 12 22C7 20 4 14 4 6Z" fill="#0b2540" stroke="none"/><path d="M7 11L9 9.3L11 11" stroke="#f1f5f7" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 11L15 9.3L17 11" stroke="#f1f5f7" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 14C9 17.5 15 17.5 17 14" stroke="#f1f5f7" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+                    <span>I was tired of strategies that looked great until conditions changed.</span>
+                </div>
+                <div class="vaultline-feature-card">
+                    <svg class="vaultline-feature-check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#0b2540" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>I wanted one part of my portfolio that didn't demand my attention every day.</span>
+                </div>
+            </div>
+            <p class="vaultline-closing-tagline">If you're here, it's likely because parts of this already sound like you — and you're looking for a secure way to grow a portion of your portfolio that isn't tied to what you already own.</p>
+        </div>
+        <div class="faq-column" id="section-demo">
+            <h4 class="vaultline-video-subheadline vaultline-faq-subheadline" id="section-faq">FAQ Short Videos</h4>
+            <p class="vaultline-video-tagline" style="margin-bottom:0.75rem;">For Quick Clarity</p>
+            <select class="vaultline-faq-search" id="faqSelect">
+                <option value="" disabled selected>Search or select a question...</option>
+                <optgroup label="Trust &amp; Safety">
+                    <option value="u0oJaiN2ic0">How do I know this isn't a scam?</option>
+                    <option value="VetR-JXAxxA">Who actually holds my money — is it in your account or mine?</option>
+                    <option value="_LMZhV5PEts">Can I take my money out whenever I want?</option>
+                    <option value="O6Zii7Tjk1g">How do I know the results are real and not cherry-picked?</option>
+                </optgroup>
+                <optgroup label="The Product">
+                    <option value="g8pT5GxWPF0">Do I have to sit and watch charts all day or does it run itself?</option>
+                    <option value="n0YDltiafGE">I already have property and stocks — where does this fit in?</option>
+                    <option value="BNLLP359fss">What happens to my money if the market crashes?</option>
+                </optgroup>
+                <optgroup label="Getting Started">
+                    <option value="nEDbK3S7Kgo">How much money do I need to get started?</option>
+                    <option value="EuapQeplINI">What account do I need to open and how does that work?</option>
+                </optgroup>
+                <optgroup label="Performance &amp; Risk">
+                    <option value="Qvr4hb7lhOQ">What kind of returns are people actually seeing?</option>
+                    <option value="vLepn6FwCxQ">What's the worst case scenario — how much could I lose?</option>
+                    <option value="UcIHjbtYI7g">You can't guarantee future returns — so why should I trust the numbers?</option>
+                </optgroup>
+                <optgroup label="The Team">
+                    <option value="fqqnAeQw9tA">Who are the people behind this and why should I trust them?</option>
+                    <option value="7m3Im7eBxTg">How is this any different from just using a financial adviser?</option>
+                </optgroup>
+            </select>
+            <h5 class="vaultline-faq-video-title" id="faqVideoTitle" style="display:none;"></h5>
+            <div class="video-frame" id="faqVideoFrame" style="display:none;">
+                <iframe id="faqIframe" src="" title="FAQ Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;aspect-ratio:16/9;border:none;display:block;"></iframe>
+            </div>
+        </div>
+    </div>
     </section>
-    <script>
-        document.addEventListener('click', function (event) {
-            var wrap = event.target.closest('.video-wrap');
-            if (!wrap) return;
-            if (wrap.querySelector('iframe')) return;
-            var videoId = wrap.dataset.videoId;
-            if (!videoId) return;
-            var iframe = document.createElement('iframe');
-            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0';
-            iframe.title = 'Video';
-            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-            iframe.allowFullscreen = true;
-            iframe.loading = 'lazy';
-            iframe.style.position = 'absolute';
-            iframe.style.inset = '0';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.border = '0';
-            wrap.innerHTML = '';
-            wrap.appendChild(iframe);
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-    <script>
-        (function () {
-            var MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-            var monthlyData = [
-                { year: 2023, month: 0, strata: 13.05, sp500: 5.80, gold: 2.26, crypto: 30.40 },
-                { year: 2023, month: 1, strata: 10.76, sp500: -2.45, gold: -6.78, crypto: 3.40 },
-                { year: 2023, month: 2, strata: 5.86, sp500: 3.68, gold: 5.18, crypto: 9.30 },
-                { year: 2023, month: 3, strata: 4.88, sp500: 1.64, gold: 2.28, crypto: 3.20 },
-                { year: 2023, month: 4, strata: 5.33, sp500: 0.31, gold: -4.95, crypto: -6.00 },
-                { year: 2023, month: 5, strata: 9.37, sp500: 6.39, gold: -3.49, crypto: 3.30 },
-                { year: 2023, month: 6, strata: 8.13, sp500: 3.11, gold: 5.11, crypto: 1.00 },
-                { year: 2023, month: 7, strata: 5.00, sp500: -1.55, gold: -1.29, crypto: -8.80 },
-                { year: 2023, month: 8, strata: 4.58, sp500: -5.35, gold: -3.69, crypto: 2.60 },
-                { year: 2023, month: 9, strata: 8.94, sp500: -2.12, gold: 1.52, crypto: 19.00 },
-                { year: 2023, month: 10, strata: 5.73, sp500: 8.72, gold: 2.32, crypto: 11.00 },
-                { year: 2023, month: 11, strata: 5.24, sp500: 4.61, gold: 3.36, crypto: 15.20 },
-                { year: 2024, month: 0, strata: 5.21, sp500: 2.12, gold: -1.31, crypto: 0.40 },
-                { year: 2024, month: 1, strata: 4.93, sp500: 4.84, gold: 0.28, crypto: 40.00 },
-                { year: 2024, month: 2, strata: 7.05, sp500: 3.06, gold: 9.25, crypto: 16.30 },
-                { year: 2024, month: 3, strata: 12.01, sp500: -4.23, gold: 2.05, crypto: -11.30 },
-                { year: 2024, month: 4, strata: 2.51, sp500: 4.94, gold: 1.80, crypto: 8.60 },
-                { year: 2024, month: 5, strata: 3.46, sp500: 3.08, gold: -0.17, crypto: -11.40 },
-                { year: 2024, month: 6, strata: 1.84, sp500: 0.94, gold: 5.23, crypto: 6.10 },
-                { year: 2024, month: 7, strata: 12.15, sp500: 2.00, gold: 2.24, crypto: 4.63 },
-                { year: 2024, month: 8, strata: 5.00, sp500: 2.46, gold: 5.26, crypto: 8.00 },
-                { year: 2024, month: 9, strata: 7.45, sp500: -0.91, gold: 4.11, crypto: 2.80 },
-                { year: 2024, month: 10, strata: 5.39, sp500: 5.40, gold: -3.24, crypto: 31.74 },
-                { year: 2024, month: 11, strata: 2.36, sp500: -2.62, gold: -1.13, crypto: -20.52 },
-                { year: 2025, month: 0, strata: 3.83, sp500: 2.33, gold: 6.64, crypto: 9.61 },
-                { year: 2025, month: 1, strata: 3.96, sp500: -0.25, gold: 2.04, crypto: -17.61 },
-                { year: 2025, month: 2, strata: 4.78, sp500: -5.97, gold: 9.32, crypto: -2.16 },
-                { year: 2025, month: 3, strata: 10.58, sp500: -0.51, gold: 5.29, crypto: 14.12 },
-                { year: 2025, month: 4, strata: 6.09, sp500: 5.09, gold: 0.03, crypto: 11.07 },
-                { year: 2025, month: 5, strata: 5.36, sp500: 5.23, gold: 0.01, crypto: 2.39 },
-                { year: 2025, month: 6, strata: 5.47, sp500: 2.46, gold: -0.38, crypto: 8.04 },
-                { year: 2025, month: 7, strata: 8.93, sp500: 2.75, gold: 4.78, crypto: -6.48 },
-                { year: 2025, month: 8, strata: 11.89, sp500: 4.48, gold: 12.03, crypto: 5.38 },
-                { year: 2025, month: 9, strata: 4.09, sp500: 2.63, gold: 3.60, crypto: -3.95 },
-                { year: 2025, month: 10, strata: 5.33, sp500: -0.48, gold: 5.50, crypto: -17.49 },
-                { year: 2025, month: 11, strata: 0.81, sp500: -0.48, gold: -0.59, crypto: 2.55 },
-                { year: 2026, month: 0, strata: 6.60, sp500: 0.89, gold: 12.75, crypto: -10.16 },
-                { year: 2026, month: 1, strata: 2.84, sp500: -1.21, gold: 5.00, crypto: -13.57 },
-                { year: 2026, month: 2, strata: 15.51, sp500: -5.76, gold: 10.08, crypto: 1.24 },
-                { year: 2026, month: 3, strata: 6.42, sp500: -0.76, gold: 5.83, crypto: 13.61 },
-                { year: 2026, month: 4, strata: 3.68, sp500: 6.15, gold: -0.49, crypto: -2.67 },
-                { year: 2026, month: 5, strata: 3.21, sp500: null, gold: null, crypto: null }
-            ];
-            var trackRows = monthlyData.filter(function (r) { return r.year >= 2025 && r.strata !== null && r.strata !== undefined; });
-            document.getElementById('trackGain').textContent = '+193.53%';
-            document.getElementById('trackAbsGain').textContent = '+193.55%';
-            document.getElementById('trackDaily').textContent = '0.21%';
-            document.getElementById('trackMonthly').textContent = '6.39%';
-            var trackDrawdownEl = document.getElementById('trackDrawdown');
-            trackDrawdownEl.textContent = '13.78%';
-            trackDrawdownEl.classList.add('track-negative');
-
-            var trackLabels = [];
-            var trackCumulative = [];
-            var trackRunning = 0;
-            trackRows.forEach(function (row) {
-                trackLabels.push(MONTH_NAMES[row.month] + ' ' + String(row.year).slice(2));
-                trackRunning += row.strata;
-                trackCumulative.push(Math.round(trackRunning * 100) / 100);
-            });
-            var trackLatest = trackRows[trackRows.length - 1];
-
-            new Chart(document.getElementById('trackPerfChart').getContext('2d'), {
-                type: 'line',
-                data: {
-                    labels: trackLabels,
-                    datasets: [{
-                        data: trackCumulative,
-                        borderColor: '#16a34a',
-                        backgroundColor: 'rgba(22, 163, 74, 0.08)',
-                        borderWidth: 2,
-                        pointRadius: 0,
-                        fill: true,
-                        tension: 0.15
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: { callbacks: { label: function (item) { return item.formattedValue + '%'; } } }
-                    },
-                    scales: {
-                        x: { ticks: { maxTicksLimit: 6, color: '#334155', font: { size: 10 } }, grid: { display: false } },
-                        y: { ticks: { color: '#334155', font: { size: 10 }, callback: function (v) { return v + '%'; } }, grid: { color: 'rgba(11,37,64,0.08)' } }
-                    }
-                }
-            });
-
-            var trackBarColors = ['#a855f7', '#dc2626', '#0ea5e9', '#f97316', '#65a30d', '#eab308', '#16a34a', '#0b2540', '#7c3aed', '#0891b2', '#ea580c', '#84cc16'];
-            var trackBarData = {
-                2025: { labels: ['Jan 2025', 'Feb 2025', 'Mar 2025', 'Apr 2025', 'May 2025', 'Jun 2025', 'Jul 2025', 'Aug 2025', 'Sep 2025', 'Oct 2025', 'Nov 2025', 'Dec 2025'], values: monthlyData.filter(function (r) { return r.year === 2025; }).map(function (r) { return r.strata; }) },
-                2026: { labels: ['Jan 2026', 'Feb 2026', 'Mar 2026', 'Apr 2026', 'May 2026', 'Jun 2026'], values: [6.60, 2.84, 15.51, 6.42, 3.68, 5.81] }
-            };
-
-            var trackBarChart = new Chart(document.getElementById('trackBarChart').getContext('2d'), {
-                type: 'bar',
-                data: {
-                    labels: trackBarData[2026].labels,
-                    datasets: [{
-                        data: trackBarData[2026].values,
-                        backgroundColor: trackBarColors
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: { callbacks: { label: function (item) { return '+' + item.formattedValue + '%'; } } }
-                    },
-                    scales: {
-                        x: { ticks: { color: '#334155', font: { size: 10 } }, grid: { display: false } },
-                        y: { ticks: { color: '#334155', font: { size: 10 }, callback: function (v) { return v + '%'; } }, grid: { color: 'rgba(11,37,64,0.08)' } }
-                    }
-                }
-            });
-
-            document.getElementById('trackBarTitle').textContent = 'Monthly Gain 2026';
-
-            document.querySelectorAll('.track-bar-tab').forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    document.querySelectorAll('.track-bar-tab').forEach(function (b) { b.classList.remove('active'); });
-                    btn.classList.add('active');
-                    var year = btn.dataset.barYear;
-                    document.getElementById('trackBarTitle').textContent = 'Monthly Gain ' + year;
-                    trackBarChart.data.labels = trackBarData[year].labels;
-                    trackBarChart.data.datasets[0].data = trackBarData[year].values;
-                    trackBarChart.update();
-                });
-            });
-
-            var testimonials = [
-                { name: 'Amanda', id: 'QGK_cGc0oOw' },
-                { name: 'Ryan', id: 'u-0a28MqdmY' },
-                { name: 'Adolfo', id: 'C_9ptnYbe-I' },
-                { name: 'Sebastian', id: 'AqWzGTE3XgE' },
-                { name: 'Batuhan', id: '5dM5ihkgUoI' }
-            ];
-            var testimonialIndex = 0;
-
-            function renderTestimonial() {
-                var t = testimonials[testimonialIndex];
-                document.getElementById('testimonialName').textContent = t.name;
-                var wrap = document.getElementById('testimonialVideoWrap');
-                wrap.dataset.videoId = t.id;
-                wrap.innerHTML =
-                    '<img id="testimonialThumb" src="https://img.youtube.com/vi/' + t.id + '/hqdefault.jpg" alt="' + t.name + ' testimonial" class="video-facade-thumb">' +
-                    '<div class="video-facade-play"><div class="play-btn-group">' +
-                    '<svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg" class="yt-play-icon"><rect width="68" height="48" rx="10" fill="#FF0000"/><polygon points="27,12 27,36 47,24" fill="white"/></svg>' +
-                    '<span class="play-label">Play Now</span></div></div>';
-            }
-
-            document.getElementById('testimonialPrev').addEventListener('click', function () {
-                testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
-                renderTestimonial();
-            });
-
-            document.getElementById('testimonialNext').addEventListener('click', function () {
-                testimonialIndex = (testimonialIndex + 1) % testimonials.length;
-                renderTestimonial();
-            });
-        })();
-    </script>
     <footer class="site-footer">
         <div class="site-footer-inner">
             <div class="footer-logo-row">
@@ -2598,9 +2148,32 @@
     </footer>
     <script>
         (function () {
+            var faqSelect = document.getElementById('faqSelect');
+            var faqTitle  = document.getElementById('faqVideoTitle');
+            var faqFrame  = document.getElementById('faqVideoFrame');
+            var faqIframe = document.getElementById('faqIframe');
+            if (!faqSelect || !faqIframe) return;
+
+            function loadVideo(videoId, label) {
+                if (faqTitle) { faqTitle.textContent = label; faqTitle.style.display = 'block'; }
+                faqIframe.src = 'https://www.youtube.com/embed/' + videoId + '?rel=0';
+                faqFrame.style.display = 'block';
+            }
+
+            // Default: What kind of returns are people actually seeing?
+            loadVideo('Qvr4hb7lhOQ', 'What kind of returns are people actually seeing?');
+
+            faqSelect.addEventListener('change', function () {
+                var videoId = faqSelect.value;
+                var label   = faqSelect.options[faqSelect.selectedIndex].text;
+                if (videoId) loadVideo(videoId, label);
+            });
+        })();
+    </script>
+    <script>
+        (function () {
             var btn = document.getElementById('navMenuBtn');
             var menu = document.getElementById('mobileMenu');
-            var labelEl = document.getElementById('navSectionLabel');
             if (!btn || !menu) return;
 
             btn.addEventListener('click', function (e) {
@@ -2617,39 +2190,6 @@
             menu.querySelectorAll('[data-menu-item]').forEach(function (link) {
                 link.addEventListener('click', function () { menu.classList.remove('open'); });
             });
-
-            if (!labelEl) return;
-            var sections = [
-                { id: 'section-cofounder', label: 'Why Vaultline' },
-                { id: 'section-thesis',    label: 'Investment Thesis' },
-                { id: 'section-architecture', label: 'Architecture' },
-                { id: 'section-resources', label: 'Resources & Performance' },
-                { id: 'section-start',     label: 'How To Start' },
-            ];
-            var currentLabel = '';
-            var navHeight = document.querySelector('nav').offsetHeight;
-
-            function updateLabel() {
-                var scrollY = window.scrollY;
-                var active = null;
-                sections.forEach(function (s) {
-                    var el = document.getElementById(s.id);
-                    if (el && el.getBoundingClientRect().top <= navHeight + 40) {
-                        active = s;
-                    }
-                });
-                var newLabel = active ? active.label : '';
-                if (newLabel !== currentLabel) {
-                    currentLabel = newLabel;
-                    labelEl.classList.remove('flip');
-                    void labelEl.offsetWidth;
-                    labelEl.textContent = newLabel;
-                    if (newLabel) labelEl.classList.add('flip');
-                }
-            }
-
-            window.addEventListener('scroll', updateLabel, { passive: true });
-            updateLabel();
         })();
     </script>
 </body>
