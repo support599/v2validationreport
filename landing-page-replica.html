@@ -16,6 +16,7 @@
     --paper:#ffffff;
     --muted:#6b6b70;
     --line:#e5e5e8;
+    --green:#22c55e;
     --max:480px;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -391,6 +392,76 @@
   }
   .hero-form-btn:hover{background:var(--accent-dark);}
 
+  /* ---------- Comparison table ---------- */
+  .compare{
+    background:#fff;
+    padding:2.2rem 1.4rem 2.4rem;
+  }
+  .compare-title{
+    text-align:left;
+    font-size:1.05rem;
+    font-weight:800;
+    line-height:1.35;
+    color:var(--ink);
+    text-transform:uppercase;
+    margin-bottom:1.4rem;
+  }
+  .compare-table{
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    border:1px solid var(--line);
+  }
+  .compare-row{
+    display:grid;
+    grid-template-columns:1.15fr 1fr 1fr 1fr;
+  }
+  .compare-row + .compare-row{
+    border-top:1px solid var(--line);
+  }
+  .compare-head{
+    background:var(--ink);
+  }
+  .compare-cell{
+    padding:.7rem .4rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+  .compare-feature{
+    justify-content:flex-start;
+    text-align:left;
+    font-weight:700;
+    font-size:.72rem;
+    color:var(--ink);
+    padding-left:.7rem;
+  }
+  .compare-head .compare-cell{
+    color:#fff;
+    font-weight:700;
+    font-size:.62rem;
+    line-height:1.25;
+  }
+  .compare-head .compare-feature{color:#fff;}
+  .bars{
+    display:flex;
+    align-items:flex-end;
+    gap:2px;
+  }
+  .bar{
+    width:4px;
+    background:#e5e5e8;
+    border-radius:2px;
+  }
+  .bar:nth-child(1){height:6px;}
+  .bar:nth-child(2){height:9px;}
+  .bar:nth-child(3){height:12px;}
+  .bar:nth-child(4){height:15px;}
+  .bar:nth-child(5){height:18px;}
+  .bar.red{background:var(--accent);}
+  .bar.green{background:var(--green);}
+
   /* ---------- Free training section ---------- */
   .training-head{
     background:var(--ink);
@@ -689,6 +760,55 @@
         <input type="email" class="hero-form-input" placeholder="Email Address" required>
         <button type="submit" class="hero-form-btn">Next</button>
       </form>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="compare">
+    <h2 class="compare-title">Why Does Your Service Business Need This?<br>Agencies Are DEAD!</h2>
+    <div class="compare-table">
+      <div class="compare-row compare-head">
+        <div class="compare-cell compare-feature">Features</div>
+        <div class="compare-cell">Freelancers &amp; Outsourcing</div>
+        <div class="compare-cell">Traditional Agencies</div>
+        <div class="compare-cell">GoStack Systems</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell compare-feature">Delivery Speed</div>
+        <div class="compare-cell">
+          <div class="bars"><span class="bar red"></span><span class="bar red"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+        <div class="compare-cell">
+          <div class="bars"><span class="bar red"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+        <div class="compare-cell">
+          <div class="bars"><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span></div>
+        </div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell compare-feature">Affordability</div>
+        <div class="compare-cell">
+          <div class="bars"><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+        <div class="compare-cell">
+          <div class="bars"><span class="bar red"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+        <div class="compare-cell">
+          <div class="bars"><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span></div>
+        </div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell compare-feature">High Quality</div>
+        <div class="compare-cell">
+          <div class="bars"><span class="bar red"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+        <div class="compare-cell">
+          <div class="bars"><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span><span class="bar"></span></div>
+        </div>
+        <div class="compare-cell">
+          <div class="bars"><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span><span class="bar green"></span></div>
+        </div>
+      </div>
     </div>
   </section>
 
