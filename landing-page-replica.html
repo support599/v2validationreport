@@ -292,26 +292,41 @@
   }
   .solution-row{
     display:flex;
-    flex-direction:column;
+    align-items:center;
+    gap:1rem;
     width:100%;
-    padding:1.2rem 0;
+    padding:1.1rem 0;
     border-top:1px solid rgba(255,255,255,.14);
   }
   .solution-row:last-child{
     border-bottom:1px solid rgba(255,255,255,.14);
   }
+  .solution-icon{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:44px;
+    flex-shrink:0;
+  }
   .solution-rank{
-    font-size:1.5rem;
+    font-size:1.05rem;
     font-weight:800;
     color:var(--accent);
     line-height:1;
-    margin-bottom:.5rem;
+  }
+  .solution-suit{
+    font-size:1.5rem;
+    color:#fff;
+    line-height:1;
+    margin-top:.15rem;
   }
   .solution-desc{
-    font-size:1rem;
+    font-size:.92rem;
     font-weight:700;
     color:#fff;
     line-height:1.35;
+    flex:1;
   }
 
   /* ---------- Roadmap section ---------- */
@@ -633,23 +648,23 @@
     <h2>Our White Glove Solution</h2>
     <div class="solution-list">
       <div class="solution-row">
-        <span class="solution-rank">A&spades;</span>
+        <div class="solution-icon"><span class="solution-rank">A</span><span class="solution-suit">&spades;</span></div>
         <span class="solution-desc">Lead Generation &amp; Acquisition</span>
       </div>
       <div class="solution-row">
-        <span class="solution-rank">K&spades;</span>
+        <div class="solution-icon"><span class="solution-rank">K</span><span class="solution-suit">&spades;</span></div>
         <span class="solution-desc">Sales Optimization &amp; Management</span>
       </div>
       <div class="solution-row">
-        <span class="solution-rank">Q&spades;</span>
+        <div class="solution-icon"><span class="solution-rank">Q</span><span class="solution-suit">&spades;</span></div>
         <span class="solution-desc">CRM Automation &amp; Follow-Up</span>
       </div>
       <div class="solution-row">
-        <span class="solution-rank">J&spades;</span>
+        <div class="solution-icon"><span class="solution-rank">J</span><span class="solution-suit">&spades;</span></div>
         <span class="solution-desc">Operations Optimization &amp; Management</span>
       </div>
       <div class="solution-row">
-        <span class="solution-rank">10&spades;</span>
+        <div class="solution-icon"><span class="solution-rank">10</span><span class="solution-suit">&spades;</span></div>
         <span class="solution-desc">Business Intelligence &amp; Growth Optimization</span>
       </div>
     </div>
