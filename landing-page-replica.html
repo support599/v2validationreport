@@ -271,29 +271,47 @@
   }
   .btn-outline:hover{background:var(--accent);color:#fff;}
 
-  /* ---------- Stats ---------- */
-  .stats{
+  /* ---------- White Glove Solution ---------- */
+  .solution{
     background:var(--ink);
-    color:#fff;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:1.6rem 1rem;
-    padding:2.4rem 1.4rem 2.6rem;
-    text-align:center;
+    padding:2.4rem 1.4rem 1rem;
   }
-  .stats .num{
-    font-size:1.6rem;
+  .solution h2{
+    color:#fff;
+    font-size:1.15rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.01em;
+    text-align:left;
+    margin-bottom:1.2rem;
+  }
+  .solution-list{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+  }
+  .solution-row{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    padding:1.2rem 0;
+    border-top:1px solid rgba(255,255,255,.14);
+  }
+  .solution-row:last-child{
+    border-bottom:1px solid rgba(255,255,255,.14);
+  }
+  .solution-rank{
+    font-size:1.5rem;
     font-weight:800;
     color:var(--accent);
     line-height:1;
-    margin-bottom:.35rem;
+    margin-bottom:.5rem;
   }
-  .stats .label{
-    font-size:.6rem;
-    font-weight:600;
-    letter-spacing:.04em;
-    text-transform:uppercase;
-    color:#c9c9cc;
+  .solution-desc{
+    font-size:1rem;
+    font-weight:700;
+    color:#fff;
+    line-height:1.35;
   }
 
   /* ---------- Roadmap section ---------- */
@@ -610,25 +628,32 @@
     <p class="hero-sub">Standardized Operating Procedures, Centralized CRM Workflows, And Automated Follow-Ups That Turn Owner-Operated Chaos Into A Repeatable System.</p>
   </section>
 
-  <!-- Stats -->
-  <div class="stats">
-    <div>
-      <div class="num">3&ndash;10X</div>
-      <div class="label">Avg. Return On Ad Spend</div>
+  <!-- White Glove Solution -->
+  <section class="solution">
+    <h2>Our White Glove Solution</h2>
+    <div class="solution-list">
+      <div class="solution-row">
+        <span class="solution-rank">A&spades;</span>
+        <span class="solution-desc">Lead Generation &amp; Acquisition</span>
+      </div>
+      <div class="solution-row">
+        <span class="solution-rank">K&spades;</span>
+        <span class="solution-desc">Sales Optimization &amp; Management</span>
+      </div>
+      <div class="solution-row">
+        <span class="solution-rank">Q&spades;</span>
+        <span class="solution-desc">CRM Automation &amp; Follow-Up</span>
+      </div>
+      <div class="solution-row">
+        <span class="solution-rank">J&spades;</span>
+        <span class="solution-desc">Operations Optimization &amp; Management</span>
+      </div>
+      <div class="solution-row">
+        <span class="solution-rank">10&spades;</span>
+        <span class="solution-desc">Business Intelligence &amp; Growth Optimization</span>
+      </div>
     </div>
-    <div>
-      <div class="num">G5</div>
-      <div class="label">Proprietary Framework</div>
-    </div>
-    <div>
-      <div class="num">100%</div>
-      <div class="label">Built In-House, No Agencies</div>
-    </div>
-    <div>
-      <div class="num">2026</div>
-      <div class="label">Built For The Andromeda Era</div>
-    </div>
-  </div>
+  </section>
 
   <!-- Roadmap -->
   <section class="roadmap" id="guide">
